@@ -31,12 +31,13 @@ header{
 }
 
 #main{
-	@apply px-5 
+	@apply px-5 pt-[8.8rem] 
 }
 
 #category{
-	@apply amerigo text-2xl
+	@apply amerigo text-4xl text-center
 }
+
 /* The switch - the box around the slider */
 .switch {
 	@apply relative inline-block w-[52px] h-7
@@ -53,22 +54,38 @@ header{
 }
 
 input:checked + .slider {
-  background-color: #00b289;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  @apply bg-green-shade
 }
 
 input:checked + .slider:before {
-  transform: translateX(24px);
+	@apply translate-x-6
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 28px;
+  @apply rounded-[28px]
 }
 
 .slider.round:before {
-  border-radius: 50%;
+	@apply rounded-[50%]
+}
+
+#toggle-div{
+	@apply flex items-center justify-between px-16 mt-16 relative
+}
+
+#toggle-div>p{
+	@apply uppercase font-semibold tracking-widest opacity-70
+}
+
+.selected{
+	@apply opacity-100
+}
+
+.plan{
+	@apply mt-7 border rounded relative overflow-hidden
+}
+
+#popular{
+	@apply absolute -right-14 top-14 bg-green-shade text-white rotate-45 uppercase text-sm w-60 font-semibold tracking-wide h-7 flex justify-center items-center overflow-hidden
 }
