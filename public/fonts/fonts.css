@@ -1,0 +1,28 @@
+@font-face {
+	font-family: Proxima Nova;
+	src: url(./ProximaNova-Bold-opt.woff2);
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Proxima Nova;
+	src: url(./ProximaNova-Light-opt.woff2);
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: Proxima Nova;
+	src: url(./ProximaNova-Regular-opt.woff2);
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Proxima Nova;
+	src: url(./ProximaNova-Semibold-opt.woff2);
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: AmerigoBT;
+	src: url(./AmerigoBT-RomanA-opt.woff2);
+}

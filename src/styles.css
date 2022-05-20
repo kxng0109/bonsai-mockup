@@ -1,3 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	html {
+		font-family: Proxima Nova, sans-serif;
+	}
+}
+
+@layer components{
+	.amerigo{
+		@apply font-['AmerigoBT']
+	}
+}
+
+header{
+	@apply z-2 fixed flex justify-between items-center px-10 py-2 inset-x-0
+}
+
+#logo{
+	@apply w-[9.4rem]
+}
+
+#menu-box{
+	@apply p-2
+}
+
+#open-menu, #close-menu{
+	@apply text-5xl
+}
+
+#main{
+	@apply px-5 
+}
+
+#category{
+	@apply amerigo text-2xl
+}
+/* The switch - the box around the slider */
+.switch {
+	@apply relative inline-block w-[52px] h-7
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	@apply opacity-0 w-0 h-0
+}
+
+/* The slider */
+.slider {
+	@apply absolute cursor-pointer inset-0 bg-green-shade transition-all duration-100 before:absolute before:content-[''] before:h-6 before:w-6 before:left-0.5 before:bottom-0.5 before:bg-white before:transition-all before:duration-100
+}
+
+input:checked + .slider {
+  background-color: #00b289;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 28px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

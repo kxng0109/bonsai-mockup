@@ -4,114 +4,225 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./styles.css">
+	<link rel="stylesheet" href="./fonts/fonts.css">
 	<script type="text/javascript" src="./index.js" defer></script>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
 	<title>Pricing - Bonsai Freelance Solution</title>
 </head>
-<body>
+<body class="text-grey-shade">
 	<div id="container">
 		<header>
-			<img src="./images/logo.svg">
+			<a href="#"><img src="./images/logo.svg" id="logo"></a>
 			<div id="menu-box">
-				<ion-icon name="menu" id="open-menu"></ion-icon>
-				<ion-icon name="close" id="close-menu"></ion-icon>
+				<ion-icon name="menu-outline" id="open-menu"></ion-icon>
+				<ion-icon name="close" id="close-menu" class="hidden"></ion-icon>
 			</div>
 		</header>
 
-		<main>
-			<section>
-				<p>Plans & Pricing</p>
-				<div>
-					<p>Monthly</p>
-					<!-- A button here -->
-					<p>Yearly</p>
+		<main id="main">
+			<section class="plans-section">
+				<p id="category">Plans & Pricing</p>
+				<div id="toggle-div">
+					<p id="toggle-div--monthly">Monthly</p>
+					<!-- Toogle Switch courtesy w3schools -->
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider round"></span>
+					</label>
+					<p id="toggle-div--yearly">Yearly</p>
 				</div>
-				<div>
-					<p></p>
-					<div>
-						<sub></sub>
-						<h3></h3>
-						<sub></sub>
+
+				<div id="workflow-normal" class="plan">
+					<p class="plan-name">Workflow</p>
+					<div class="price">
+						<sub>$</sub>
+						<h3>19</h3>
+						<sub>/MONTH</sub>
 					</div>
 					<div>
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
+						<ul class="plan-features">
+							<li>Unlimited Clients & Projects</li>
+							<li>Proposals</li>
+							<li>Contracts</li>
+							<li>Invoicing & Payments</li>
+							<li>Client CRM</li>
+							<li>Project Management</li>
+							<li>Task & Time Tracking</li>
+							<li>iOS, Android, Chrome, & Mac Apps</li>
 						</ul>
-					</div>
-					<button type="submit"></button>
+					</div>					
+					<button type="submit" class="start-plan-btn">START FREE</button>
 				</div>
-				<div>
-					<p></p>
-					<div>
-						<sub></sub>
-						<h3></h3>
-						<sub></sub>
+
+				<div id="workflow-plus" class="plan">
+					<p class="plan-name">Workflow</p>
+					<div class="price">
+						<sub>$</sub>
+						<h3>19</h3>
+						<sub>/MONTH</sub>
 					</div>
 					<div>
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
+						<ul class="plan-features">
+							<li>Everything in Workfloe, plus,,,</li>
+							<li>White-labelled client experience</li>
+							<li class="plan-features--new-feature">Client forms and questionnaires</li>
+							<li>Workflow automations</li>
+							<li>Subcontracting (client-mode)</li>
+							<li>Calendly integration</li>
+							<li>Client portal</li>
+							<li>Priority support</li>
 						</ul>
-					</div>
-					<button type="submit"></button>
+					</div>					
+					<button type="submit" class="start-plan-btn">START FREE</button>
 				</div>
 			</section>
 
-			<section>
+			<section id="addons-section">
 				<p>Super charge your work with add-ons</p>
-				<div>
-					<div>
-						<p></p>
-						<p></p>
+				<div class="addons-div">
+					<div id="free" class="addons">
+						<p class="price"></p>
 					</div>
-					<p></p>
-					<p></p>
+					<div class="addons-features">
+						<p>Collaborators</p>
+						<p>Invite other users to specific projects for limited access and functionality.</p>
+					</div>
 				</div>
-				<div>
-					<div>
-						<p></p>
-						<p></p>
+
+				<div class="addons-div">
+					<div id="free" class="addons">
+						<p class="price">$9</p>
+						<p>/MONTH</p>
 					</div>
-					<p></p>
-					<p></p>
+					<div class="addons-features">
+						<p>Partners</p>
+						<p>Invite other users for full account access and company management.</p>
+					</div>
 				</div>
-				<div>
-					<div>
-						<p></p>
-						<p></p>
+
+				<div class="addons-div">
+					<div id="free" class="addons">
+						<p class="price">$10</p>
+						<p>/MONTH</p>
 					</div>
-					<p></p>
-					<p></p>
+					<div class="addons-features">
+						<p>Bonsai Tax</p>
+						<p>Track expenses, identify write-offs, and estimate quarterly taxes easily.</p>
+					</div>
 				</div>
 			</section>
-			<section>
-				<p></p>
+
+			<section id="third-section">
+				<p>It’s <span>your</span> business.</p>
+				<p>We’re here to help it grow.</p>
 				<input type="button">
 			</section>
 
-			<section>
-				<p></p>
-				<p></p>
-				<p></p>
-				<p></p>
-				<p></p>
+			<section id="faq-section">
+				<div class="faqs">
+					<div class="faqs--questions-div">
+						<p class="faqs--question">How does the 14 day free trial work?</p>
+						<ion-icon name="chevron-down-outline" class="faqs--expand-btn"></ion-icon>
+					</div>
+					<p class="faqs--answers">When you start your trial with Bonsai you'll receive full, unlimited access to all of Bonsai's Workflow or Workflow Plus Features for 14 days! You will need to enter your credit card information to begin your trial, but don't worry - we won't charge you anything until the subscription ends! If you wish to cancel at any time during the trial period, you can do so through your Subscriptions Settings Page.</p>
+				</div>
+
+				<div class="faqs">
+					<div class="faqs--questions-div">
+						<p class="faqs--question">Can I change plans anytime?</p>
+						<ion-icon name="chevron-down-outline" class="faqs--expand-btn"></ion-icon>
+					</div>
+					<p class="faqs--answers">Yes, you can from within your account. If you have already subscribed to a plan, or want to downgrade or upgrade your current one, you can do this by going to your "Settings" and "Subscription".</p>
+				</div>
+				
+				<div class="faqs">
+					<div class="faqs--questions-div">
+						<p class="faqs--question">How do I pause my Bonsai subscription?</p>
+						<ion-icon name="chevron-down-outline" class="faqs--expand-btn"></ion-icon>
+					</div>
+					<p class="faqs--answers">We totally understand that with the nature of freelancing, work ebbs and flows so you might not always need your Bonsai subscription to remain active! The good news is that you can cancel or pause your monthly subscription at any time without penalty. Once cancelled, you'll be able to continue logging in to access all your documents and even continue to use our free features, like Time Tracking! In order to cancel your subscription, login to your Bonsai account.</p>
+				</div>
+				
+				<div class="faqs">
+					<div class="faqs--questions-div">
+						<p class="faqs--question">What is your refund policy?</p>
+						<ion-icon name="chevron-down-outline" class="faqs--expand-btn"></ion-icon>
+					</div>
+					<p class="faqs--answers">If you contact us within 2 weeks of being charged for your subscription, we will be happy to issue a refund for you!Beyond those 2 weeks, you will need to cancel or modify the subscription from the Subscriptions Tab in Settings to avoid future charges, but refunds will not be issued. This applies to both monthly and annual plans.</p>
+				</div>
 			</section>
 
-			<footer></footer>
+			<footer>
+				<section class="footer--section">
+					<p class="footer-sections--header">Products</p>
+					<div class="footer-links-div">
+						<a href="#" class="footer-section--links">Proposals</a>
+						<a href="#" class="footer-section--links">Contracts</a>
+						<a href="#" class="footer-section--links">Invoicing</a>
+						<a href="#" class="footer-section--links">Client CRM</a>
+						<a href="#" class="footer-section--links">Time Tracking</a>
+						<a href="#" class="footer-section--links">Task Tracking</a>
+						<a href="#" class="footer-section--links">Forms</a>
+						<a href="#" class="footer-section--links">Accounting</a>
+						<a href="#" class="footer-section--links">Bonsai Tax</a>
+						<a href="#" class="footer-section--links">Bonsai Cash</a>
+					</div>
+					<a href="#" class="footer-section--links text-green">Pricing</a>
+					<a href="#" class="footer-section--links">Bonsai Review</a>
+				</section>
+
+				<section class="footer--section">
+					<p class="footer-sections--header">Free Resources</p>
+					<div class="footer-links-div">
+						<a href="#" class="footer-section--links">Freelance Resources</a>
+						<a href="#" class="footer-section--links">Freelance Blog by Bonsai</a>
+						<a href="#" class="footer-section--links">How to Write a Contract</a>
+						<a href="#" class="footer-section--links">Online Signature Maker</a>
+					</div>
+					<a href="#" class="footer-section--links text-green">Self-Employed Taxes Hub</a>
+					<a href="#" class="footer-section--links">Self-Employed Tax Calculator</a>
+					<a href="#" class="footer-section--links">Self-Employed Tax Deductions</a>
+
+					<div id="footer-templates">
+						<div class="footer-templates--name">
+							<a href="#">Invoice Templates</a>
+							<ion-icon name="chevron-down-sharp" class="footer-expand-btn"></ion-icon>
+						</div>
+						<div class="footer-templates--dropdown">
+							<a href="#" class="footer-section--links">Invoice Generator</a>
+							<a href="#" class="footer-section--links">Blank Invoice Template</a>
+							<a href="#" class="footer-section--links">Consultant Invoice Template</a>
+							<a href="#" class="footer-section--links">Editable Invoice Template</a>
+							<a href="#" class="footer-section--links">Graphic Design Invoice</a>
+							<a href="#" class="footer-section--links">Web Design Invoice</a>
+							<a href="#" class="footer-section--links">Contractor Invoice Template</a>
+							<a href="#" class="footer-section--links">Photography Invoice Template</a>
+							<a href="#" class="footer-section--links">Self Employed Invoice Template</a>
+						</div>
+					</div>
+				</section>
+
+				<section class="footer--section">
+					<p class="footer-sections--header">Bonsai</p>
+					<div class="footer-links-div">
+						<a href="#" class="footer-section--links">About</a>
+						<a href="#" class="footer-section--links">Careers</a>
+						<a href="#" class="footer-section--links">Support</a>
+						<a href="#" class="footer-section--links">LinkedIn</a>
+						<a href="#" class="footer-section--links">Twitter</a>
+						<a href="#" class="footer-section--links">Privacy policy</a>
+						<a href="#" class="footer-section--links">Legal</a>
+					</div>
+
+					<div class="footer-links-div">
+						<a href="#" class="footer-section--links text-green">Affiliates</a>
+						<a href="#" class="footer-section--links">Write for Us</a>
+					</div>
+
+					<a href="#" class="footer-section--links">Comparisons</a>
+				</section>
+			</footer>
 		</main>
 	</div>
 </body>
