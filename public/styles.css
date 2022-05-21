@@ -518,17 +518,67 @@ html {
   top: -2.25rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
 .hidden {
   display: none;
+}
+
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .grow {
   flex-grow: 1;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.bg-\[\#fcfcfd\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 252 253 / var(--tw-bg-opacity));
+}
+
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 .text-grey-shade {
   --tw-text-opacity: 1;
   color: rgb(76 77 95 / var(--tw-text-opacity));
+}
+
+.text-green-shade {
+  --tw-text-opacity: 1;
+  color: rgb(0 178 137 / var(--tw-text-opacity));
 }
 
 header {
@@ -539,6 +589,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   padding-top: 0.5rem;
@@ -642,6 +694,7 @@ input:checked + .slider:before {
 #toggle-div {
   position: relative;
   margin-top: 4rem;
+  margin-bottom: 2.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -657,7 +710,7 @@ input:checked + .slider:before {
 }
 
 .selected {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .plan {
@@ -666,9 +719,13 @@ input:checked + .slider:before {
   overflow: hidden;
   border-radius: 0.25rem;
   border-width: 1px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
-#popular {
+.popular {
   position: absolute;
   right: -3.5rem;
   top: 3.5rem;
@@ -689,4 +746,147 @@ input:checked + .slider:before {
   letter-spacing: 0.025em;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.plan--name {
+  margin-top: 0.5rem;
+  font-size: 1.625rem;
+  font-weight: 600;
+}
+
+.plan--price {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.plan-price--amount {
+  margin-left: 0.75rem;
+  margin-right: 1rem;
+  font-size: 4.5rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+sup {
+  position: relative;
+  top: -0.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+sub {
+  position: relative;
+  bottom: -1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.plan-features {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-top-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 178 137 / var(--tw-border-opacity));
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+ul>li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+ul>li::before {
+  margin-right: 0.5rem;
+  width: 0.75rem;
+  --tw-content: url('./images/check.svg');
+  content: var(--tw-content);
+}
+
+.start-plan-btn {
+  width: 100%;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 178 137 / var(--tw-bg-opacity));
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.plan-features--new-feature::after {
+  margin-left: 0.5rem;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 219 98 / var(--tw-bg-opacity));
+  padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-content: 'New';
+  content: var(--tw-content);
+}
+
+#addons-section {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+#addons-section>p {
+  font-family: 'AmerigoBT';
+  margin-top: 3.75rem;
+  margin-bottom: 3.75rem;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.375;
+}
+
+.addons-div {
+  margin-bottom: 0.75rem;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.different {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-right: 0px;
+}
+
+.price {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+.addons-features {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.addons-features>p:first-child {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.addons-features>p:last-child {
+  font-weight: 300;
 }

@@ -10,7 +10,7 @@
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
 	<title>Pricing - Bonsai Freelance Solution</title>
 </head>
-<body class="text-grey-shade">
+<body class="text-grey-shade bg-[#fcfcfd]">
 	<div id="container">
 		<header>
 			<a href="#"><img src="./images/logo.svg" id="logo"></a>
@@ -24,7 +24,7 @@
 			<section class="plans-section">
 				<p id="category">Plans & Pricing</p>
 				<div id="toggle-div">
-					<p id="toggle-div--monthly">Monthly</p>
+					<p id="toggle-div--monthly" class="selected">Monthly</p>
 					<!-- Toogle Switch courtesy w3schools -->
 					<label class="switch">
 						<input type="checkbox">
@@ -35,49 +35,48 @@
 				</div>
 
 				<div id="workflow-normal" class="plan">
-					<p class="plan-name rotate">Workflow</p>
-					<div class="price">
-						<sub>$</sub>
-						<h3>19</h3>
-						<sub>/MONTH</sub>
+					<div class="hidden"><!-- hidden by default change to 'popular' when yearly is toggled -->
+						<p class="popular--text">Most Popular</p>
 					</div>
-					<div>
-						<ul class="plan-features">
-							<li>Unlimited Clients & Projects</li>
-							<li>Proposals</li>
-							<li>Contracts</li>
-							<li>Invoicing & Payments</li>
-							<li>Client CRM</li>
-							<li>Project Management</li>
-							<li>Task & Time Tracking</li>
-							<li>iOS, Android, Chrome, & Mac Apps</li>
-						</ul>
-					</div>					
+					<p class="plan--name">Workflow</p>
+					<div class="plan--price">
+						<sup>$</sup>
+						<p class="plan-price--amount">19</p>
+						<sub class="plan--duration">/MONTH</sub>
+					</div>
+					<ul class="plan-features">
+						<li>Unlimited Clients & Projects</li>
+						<li>Proposals</li>
+						<li>Contracts</li>
+						<li>Invoicing & Payments</li>
+						<li>Client CRM</li>
+						<li>Project Management</li>
+						<li>Task & Time Tracking</li>
+						<li>iOS, Android, Chrome, & Mac Apps</li>
+					</ul>				
 					<button type="submit" class="start-plan-btn">START FREE</button>
 				</div>
 
 				<div id="workflow-plus" class="plan">
-					<div id="popular">
-						<p id="popular--text">Most Popular</p>
+					<div class="popular">
+						<p class="popular--text">Most Popular</p>
 					</div>
-					<p class="plan-name">Workflow</p>
-					<div class="price">
-						<sub>$</sub>
-						<h3>19</h3>
-						<sub>/MONTH</sub>
+					<p class="plan--name">Workflow Plus</p>
+					<div class="plan--price">
+						<sup>$</sup>
+						<p class="plan-price--amount">29</p>
+						<sub class="plan--duration">/MONTH</sub>
 					</div>
-					<div>
-						<ul class="plan-features">
-							<li>Everything in Workfloe, plus,,,</li>
-							<li>White-labelled client experience</li>
-							<li class="plan-features--new-feature">Client forms and questionnaires</li>
-							<li>Workflow automations</li>
-							<li>Subcontracting (client-mode)</li>
-							<li>Calendly integration</li>
-							<li>Client portal</li>
-							<li>Priority support</li>
-						</ul>
-					</div>					
+					<ul class="plan-features">
+						<li>Everything in Workfloe, plus,,,</li>
+						<li>White-labelled client experience</li>
+						<li class="plan-features--new-feature">Client forms and questionnaires</li>
+						<li>Workflow automations</li>
+						<li>Subcontracting (client-mode)</li>
+						<li>Calendly integration</li>
+						<li>Client portal</li>
+						<li>Priority support</li>
+					</ul>				
 					<button type="submit" class="start-plan-btn">START FREE</button>
 				</div>
 			</section>
@@ -85,8 +84,8 @@
 			<section id="addons-section">
 				<p>Super charge your work with add-ons</p>
 				<div class="addons-div">
-					<div id="free" class="addons">
-						<p class="price"></p>
+					<div id="free" class="addons text-4xl">
+						<p class="price">Free</p>
 					</div>
 					<div class="addons-features">
 						<p>Collaborators</p>
@@ -95,7 +94,7 @@
 				</div>
 
 				<div class="addons-div">
-					<div id="free" class="addons">
+					<div class="addons">
 						<p class="price">$9</p>
 						<p>/MONTH</p>
 					</div>
@@ -105,8 +104,8 @@
 					</div>
 				</div>
 
-				<div class="addons-div">
-					<div id="free" class="addons">
+				<div class="addons-div different">
+					<div class="addons">
 						<p class="price">$10</p>
 						<p>/MONTH</p>
 					</div>
@@ -114,6 +113,7 @@
 						<p>Bonsai Tax</p>
 						<p>Track expenses, identify write-offs, and estimate quarterly taxes easily.</p>
 					</div>
+					<a href="#" class="text-green-shade uppercase flex items-center text-sm font-semibold mb-2 w-fit">Learn more<ion-icon name="chevron-forward-outline" class="pl-1"></ion-icon></a>
 				</div>
 			</section>
 
