@@ -14,7 +14,7 @@
 	}
 
 	.custom-transition{
-		transition: height 0.3s linear;
+		transition: height 0.2s linear;
 	}
 }
 
@@ -234,7 +234,7 @@ footer{
 }
 
 .footer-sub-templates{
-	@apply cursor-pointer
+	@apply cursor-pointer w-fit
 }
 
 .footer-sub-templates--name{
@@ -250,5 +250,5 @@ footer{
 }
 
 .footer-sub-templates--dropdown{
-	@apply flex flex-col pl-2 h-0 overflow-hidden custom-transition
+	@apply flex flex-col pl-2 overflow-hidden custom-transition
 }

@@ -977,7 +977,7 @@ ul>li::before {
 }
 
 .faqs--answers{
-  transition: height 0.3s linear;
+  transition: height 0.2s linear;
   height: 0px;
   overflow: hidden;
   padding-right: 1.125rem;
@@ -1041,6 +1041,9 @@ footer {
 }
 
 .footer-sub-templates {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   cursor: pointer;
 }
 
@@ -1062,9 +1065,8 @@ footer {
 }
 
 .footer-sub-templates--dropdown{
-  transition: height 0.3s linear;
+  transition: height 0.2s linear;
   display: flex;
-  height: 0px;
   flex-direction: column;
   overflow: hidden;
   padding-left: 0.5rem;
