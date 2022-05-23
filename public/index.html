@@ -10,7 +10,7 @@
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
 	<title>Pricing - Bonsai Freelance Solution</title>
 </head>
-<body class="text-grey-shade bg-[#fcfcfd]">
+<body class="text-grey-shade bg-[#fbfbfb]"><!-- bg-[#fdfdfe] -->
 	<div id="container">
 		<header>
 			<a href="#"><img src="./images/logo.svg" id="logo"></a>
@@ -118,12 +118,13 @@
 			</section>
 
 			<section id="third-section">
-				<p>It’s <span>your</span> business.</p>
+				<p>It’s <span class="text-green-shade">your</span> business.</p>
 				<p>We’re here to help it grow.</p>
-				<input type="button">
+				<button type="submit" class="start-plan-btn" id="third-section--start-btn">Start Free</button>
 			</section>
 
 			<section id="faq-section">
+				<p class="text-center text-green-shade text-2xl font-bold my-10">Frequently Asked Questions</p>
 				<div class="faqs">
 					<div class="faqs--questions-div">
 						<p class="faqs--question">How does the 14 day free trial work?</p>
@@ -159,7 +160,7 @@
 
 			<footer>
 				<section class="footer--section">
-					<p class="footer-sections--header">Products</p>
+					<p class="footer-sections--header">Product</p>
 					<div class="footer-links-div">
 						<a href="#" class="footer-section--links">Proposals</a>
 						<a href="#" class="footer-section--links">Contracts</a>
@@ -172,8 +173,10 @@
 						<a href="#" class="footer-section--links">Bonsai Tax</a>
 						<a href="#" class="footer-section--links">Bonsai Cash</a>
 					</div>
-					<a href="#" class="footer-section--links text-green">Pricing</a>
-					<a href="#" class="footer-section--links">Bonsai Review</a>
+					<div>
+						<a href="#" class="footer-section--links" id="current-page">Pricing</a>
+						<a href="#" class="footer-section--links">Bonsai Reviews</a>
+					</div>
 				</section>
 
 				<section class="footer--section">
@@ -184,26 +187,108 @@
 						<a href="#" class="footer-section--links">How to Write a Contract</a>
 						<a href="#" class="footer-section--links">Online Signature Maker</a>
 					</div>
-					<a href="#" class="footer-section--links text-green">Self-Employed Taxes Hub</a>
-					<a href="#" class="footer-section--links">Self-Employed Tax Calculator</a>
-					<a href="#" class="footer-section--links">Self-Employed Tax Deductions</a>
+					<div>
+						<a href="#" class="footer-section--links text-green">Self-Employed Taxes Hub</a>
+						<a href="#" class="footer-section--links">Self-Employed Tax Calculator</a>
+						<a href="#" class="footer-section--links">Self-Employed Tax Deductions</a>
+					</div>
 
 					<div id="footer-templates">
-						<div class="footer-templates--name">
-							<a href="#">Invoice Templates</a>
-							<ion-icon name="chevron-down-sharp" class="footer-expand-btn"></ion-icon>
+						<p class="font-semibold mb-3">Templates</p>
+						<div class="footer-sub-templates">
+							<div class="footer-sub-templates--name">
+								<a href="#" class="footer-section--links fsth">Invoice Templates</a>
+								<ion-icon name="chevron-down-sharp" class="footer-sub-templates--expand-btn"></ion-icon>
+							</div>
+							<div class="footer-sub-templates--dropdown">
+								<a href="#" class="footer-section--links">Invoice Generator</a>
+								<a href="#" class="footer-section--links">Blank Invoice Template</a>
+								<a href="#" class="footer-section--links">Consultant Invoice Template</a>
+								<a href="#" class="footer-section--links">Editable Invoice Template</a>
+								<a href="#" class="footer-section--links">Graphic Design Invoice</a>
+								<a href="#" class="footer-section--links">Web Design Invoice</a>
+								<a href="#" class="footer-section--links">Contractor Invoice Template</a>
+								<a href="#" class="footer-section--links">Photography Invoice Template</a>
+								<a href="#" class="footer-section--links">Self Employed Invoice Template</a>
+							</div>
 						</div>
-						<div class="footer-templates--dropdown">
-							<a href="#" class="footer-section--links">Invoice Generator</a>
-							<a href="#" class="footer-section--links">Blank Invoice Template</a>
-							<a href="#" class="footer-section--links">Consultant Invoice Template</a>
-							<a href="#" class="footer-section--links">Editable Invoice Template</a>
-							<a href="#" class="footer-section--links">Graphic Design Invoice</a>
-							<a href="#" class="footer-section--links">Web Design Invoice</a>
-							<a href="#" class="footer-section--links">Contractor Invoice Template</a>
-							<a href="#" class="footer-section--links">Photography Invoice Template</a>
-							<a href="#" class="footer-section--links">Self Employed Invoice Template</a>
+						
+						<div class="footer-sub-templates">
+							<div class="footer-sub-templates--name">
+								<a href="#" class="footer-section--links fsth">Proposal Templates</a>
+								<ion-icon name="chevron-down-sharp" class="footer-sub-templates--expand-btn"></ion-icon>
+							</div>
+							<div class="footer-sub-templates--dropdown">
+								<a href="#" class="footer-section--links">Webaite Proposal Template</a>
+								<a href="#" class="footer-section--links">Digital Marketing Proposal Template</a>
+								<a href="#" class="footer-section--links">Social Media Marketing Proposal</a>
+								<a href="#" class="footer-section--links">Graphic Design Proposal</a>
+								<a href="#" class="footer-section--links">Freelance Proposal Template</a>
+								<a href="#" class="footer-section--links">SEO Proposal Template</a>
+							</div>
 						</div>
+						
+						<div class="footer-sub-templates">
+							<div class="footer-sub-templates--name">
+								<a href="#" class="footer-section--links fsth">Contract Templates</a>
+								<ion-icon name="chevron-down-sharp" class="footer-sub-templates--expand-btn"></ion-icon>
+							</div>
+							<div class="footer-sub-templates--dropdown">
+								<a href="#" class="footer-section--links">Online Contract</a>
+								<a href="#" class="footer-section--links">Graphic Design Contract</a>
+								<a href="#" class="footer-section--links">Freelance Contract Template</a>
+								<a href="#" class="footer-section--links">Social Media Marketing Contract</a>
+								<a href="#" class="footer-section--links">Software Development Contract</a>
+								<a href="#" class="footer-section--links">Web Design Contract</a>
+								<a href="#" class="footer-section--links">Video Production Contract</a>
+								<a href="#" class="footer-section--links">Public Relations Contract</a>
+								<a href="#" class="footer-section--links">Translation Contract</a>
+							</div>
+						</div>
+						
+						<div class="footer-sub-templates">
+							<div class="footer-sub-templates--name">
+								<a href="#" class="footer-section--links fsth">Agreement Templates</a>
+								<ion-icon name="chevron-down-sharp" class="footer-sub-templates--expand-btn"></ion-icon>
+							</div>
+							<div class="footer-sub-templates--dropdown">
+								<a href="#" class="footer-section--links">Retainer Agreement Template</a>
+								<a href="#" class="footer-section--links">Influencer Agreement Templatee</a>
+								<a href="#" class="footer-section--links">Collaboration Agreement Template</a>
+								<a href="#" class="footer-section--links">Software Development Agreement</a>
+								<a href="#" class="footer-section--links">Marketing Agreement Template</a>
+							</div>
+						</div>
+						
+						<div class="footer-sub-templates">
+							<div class="footer-sub-templates--name">
+								<a href="#" class="footer-section--links fsth">Scope of Work Templates</a>
+								<ion-icon name="chevron-down-sharp" class="footer-sub-templates--expand-btn"></ion-icon>
+							</div>
+							<div class="footer-sub-templates--dropdown">
+								<a href="#" class="footer-section--links">Website Development Scope of Work</a>
+								<a href="#" class="footer-section--links">Digital Marketing Scope of Work</a>
+								<a href="#" class="footer-section--links">Consultant Statement of Work Template</a>
+								<a href="#" class="footer-section--links">Software Development Scope of Work</a>
+							</div>
+						</div>
+						
+						<div class="footer-sub-templates">
+							<div class="footer-sub-templates--name">
+								<a href="#" class="footer-section--links fsth">Quote Templates</a>
+								<ion-icon name="chevron-down-sharp" class="footer-sub-templates--expand-btn"></ion-icon>
+							</div>
+							<div class="footer-sub-templates--dropdown">
+								<a href="#" class="footer-section--links">Freelance Quotation Template</a>
+								<a href="#" class="footer-section--links">Web Design Quotation Template</a>
+								<a href="#" class="footer-section--links">Graphic Design Quotation Template</a>
+								<a href="#" class="footer-section--links">Interior Design Quotation Template</a>
+								<a href="#" class="footer-section--links">Video Production Quotation Template</a>
+								<a href="#" class="footer-section--links">Social Media Marketing Quotation</a>
+							</div>
+						</div>
+						<a href="#" class="footer-section--links">Credit Note Templates</a>
+						<a href="#" class="footer-section--links">Estimate Templates</a>
 					</div>
 				</section>
 
@@ -224,7 +309,19 @@
 						<a href="#" class="footer-section--links">Write for Us</a>
 					</div>
 
-					<a href="#" class="footer-section--links">Comparisons</a>
+					<div class="footer-sub-templates">
+						<div class="footer-sub-templates--name">
+							<a href="#" class="footer-section--links fsth">Comaprisons</a>
+							<ion-icon name="chevron-down-sharp" class="footer-sub-templates--expand-btn"></ion-icon>
+						</div>
+						<div class="footer-sub-templates--dropdown">
+							<a href="#" class="footer-section--links">Freshbooks Alternatives</a>
+							<a href="#" class="footer-section--links">Quickbooks Alternatives</a>
+							<a href="#" class="footer-section--links">Wave vs Quickbooks</a>
+							<a href="#" class="footer-section--links">Xero vs Quickbooks</a>
+							<a href="#" class="footer-section--links">Freshbooks vs Quickbooks</a>
+						</div>
+					</div>
 				</section>
 			</footer>
 		</main>

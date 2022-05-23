@@ -12,8 +12,14 @@
 	.amerigo{
 		@apply font-['AmerigoBT']
 	}
+
+	.custom-transition{
+		transition: height 0.3s linear;
+	}
 }
 
+/*Change header to "will-change* property becuase it's onscroll 
+that the background changes from transparent to white*/
 header{
 	@apply z-2 fixed flex justify-between items-center px-10 py-2 inset-x-0 bg-white
 }
@@ -84,7 +90,7 @@ input:checked + .slider:before {
 
 
 .plan{
-	@apply mt-7 border rounded relative overflow-hidden px-6 py-10
+	@apply mt-7 border border-slate-300 rounded relative overflow-hidden px-6 py-10
 }
 
 .popular{
@@ -116,11 +122,11 @@ sub{
 }
 
 ul>li{
-	@apply my-4 before:content-[url('./images/check.svg')] before:mr-2 before:w-3
+	@apply my-4 before:content-[url('./images/check.svg')] before:mr-2
 }
 
 .start-plan-btn{
-	@apply w-full text-center bg-green-shade text-white py-5 rounded font-bold text-base
+	@apply w-full text-center bg-green-shade text-white py-5 rounded font-bold text-base uppercase
 }
 
 .plan-features--new-feature{
@@ -129,11 +135,11 @@ ul>li{
 
 
 #addons-section{
-	@apply my-24
+	@apply mt-24
 }
 
 #addons-section>p{
-	@apply my-[3.75rem] text-[1.7rem] font-bold text-center amerigo leading-snug
+	@apply my-[3.75rem] text-[1.55rem] font-bold text-center amerigo leading-snug px-3
 }
 
 .addons-div{
@@ -158,4 +164,91 @@ ul>li{
 
 .addons-features>p:last-child{
 	@apply font-light
+}
+
+
+#third-section{
+	@apply text-center bg-[#f2faff] py-12 pt-10 my-[3.75rem] rounded
+}
+
+#third-section>p{
+	@apply amerigo text-[1.6rem]
+}
+
+#third-section--start-btn{
+	@apply w-52 mt-4
+}
+
+
+#faq-section{
+	@apply pl-5 mb-16
+}
+
+.faqs--questions-div{
+	@apply flex items-center justify-between my-[1.125rem]
+}
+
+.faqs--question{
+	@apply text-2xl font-bold hover:text-green-shade
+}
+
+.faqs--expand-btn{
+	@apply text-slate-300 text-3xl
+}
+
+.faqs--answers{
+	@apply h-0 overflow-hidden custom-transition text-sm leading-6 pr-[1.125rem]
+}
+
+
+footer{
+	@apply px-1
+}
+
+.footer--section{
+	@apply mb-10
+}
+
+.footer-sections--header{
+	@apply uppercase font-semibold text-lg my-6
+}
+
+.footer-links-div{
+	@apply flex flex-col
+}
+
+.footer-section--links{
+	@apply text-grey-shade active:text-black font-thin mb-2 w-fit
+}
+
+.footer-links-div+div{
+	@apply flex flex-col my-6
+}
+
+#current-page{
+	@apply  text-green-shade
+}
+
+#footer-templates{
+	@apply flex flex-col
+}
+
+.footer-sub-templates{
+	@apply cursor-pointer
+}
+
+.footer-sub-templates--name{
+	@apply flex flex-row items-center mb-2;
+}
+
+.fsth{
+	@apply mb-0
+}
+
+.footer-sub-templates--expand-btn{
+	@apply ml-1 text-xl
+}
+
+.footer-sub-templates--dropdown{
+	@apply flex flex-col pl-2 h-0 overflow-hidden custom-transition
 }
