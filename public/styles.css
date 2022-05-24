@@ -815,7 +815,7 @@ nav {
   font-weight: 600;
 }
 
-.nbbw-divs>ion-icon, .nav-bar-templates-examples>ion-icon {
+.nbbw-divs>ion-icon, .nav-bar-templates-examples>ion-icon:first-of-type {
   margin-right: 0.5rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -827,17 +827,30 @@ nav {
 }
 
 #nav-bar--templates {
-  padding-left: 2.75rem;
-  padding-right: 2.75rem;
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+  padding-left: 2.75rem;
+  padding-right: 1rem;
 }
 
 .nav-bar-templates-examples {
+  position: relative;
   margin-top: 2.25rem;
   margin-bottom: 2.25rem;
   display: flex;
   font-weight: 400;
+}
+
+.template-hover-icon {
+  position: absolute;
+  right: 0px;
+  display: none;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.nav-bar-templates-examples:hover > .template-hover-icon {
+  display: block;
 }
 
 #main {

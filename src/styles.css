@@ -113,7 +113,7 @@ nav{
 	@apply flex items-start font-semibold my-11 cursor-pointer
 }
 
-.nbbw-divs>ion-icon, .nav-bar-templates-examples>ion-icon{
+.nbbw-divs>ion-icon, .nav-bar-templates-examples>ion-icon:first-of-type{
 	@apply text-xl mr-2
 }
 
@@ -122,11 +122,19 @@ nav{
 }
 
 #nav-bar--templates{
-	@apply px-11 py-7
+	@apply pl-11 py-7 pr-4
 }
 
 .nav-bar-templates-examples{
-	@apply flex font-normal my-9
+	@apply flex font-normal my-9 relative /*hover:after:content-[] after:absolute after:right-0*/
+}
+
+.template-hover-icon{
+	@apply absolute right-0 text-2xl hidden
+}
+
+.nav-bar-templates-examples:hover > .template-hover-icon{
+	@apply block
 }
 
 
