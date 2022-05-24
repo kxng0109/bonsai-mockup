@@ -1,3 +1,4 @@
+'use strict'
 const init = (selector, selectorType = 'querySelectorAll') => {
 	//if the first character in selector variable is '#', then chose querySelector
 	if (selector.charAt(0) === '#') return document.querySelector(selector)
@@ -14,8 +15,12 @@ const openMenu = init('#open-menu');
 const closeMenu = init('#close-menu');
 const nav = init('#nav-bar');
 const planDuration = init('.plan--duration');
-const toggleMonthly = init('.toggle-div--monthly');
-const toggleYearly = init('.toggle-div--yearly');
+const toggleMonthly = init('#toggle-div--monthly');
+const toggleYearly = init('#toggle-div--yearly');
+const normalAmount = init('#normal--amount');
+const plusAmount = init('#plus--amount');
+const plusPopular = init('#plus--popular');
+const normalPopular = init('#normal--popular');
 const checkBox = init('#checkbox');
 const navBarOptionsProduct = init('#first-nav-bar--options');
 const navBarProducts = init('#nav-bar-products');
@@ -65,6 +70,8 @@ navBarOptionsTemplates.onclick = () => {
 	nav.style.backgroundColor = 'hsl(0 0% 95%)';
 	navBarTemplates.classList.toggle('hidden');
 }
-// checkBox.onclick = () =>{
-// 	checkBox.checked ? (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected')) : (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'))
-// }
+
+checkBox.onclick = () =>{
+	checkBox.checked ? (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'), planDuration.forEach((element, index)=> planDuration[index].textContent = '/YEAR'), normalAmount.textContent = '192', plusAmount.textContent = '288', normalPopular.classList.toggle('popular'), plusPopular.classList.toggle('popular')) 
+	: (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'), planDuration.forEach((element, index)=> planDuration[index].textContent = '/MONTH'), normalAmount.textContent = '19', plusAmount.textContent = '29', normalPopular.classList.toggle('popular'), plusPopular.classList.toggle('popular'))
+}
