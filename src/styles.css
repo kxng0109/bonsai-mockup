@@ -61,12 +61,12 @@ ion-icon{
 
 
 nav{
-	@apply fixed z-1 inset-0 w-screen bg-white ml-[100vw];
+	@apply fixed z-1 inset-0 w-screen bg-white;
 	transition: all 0.3s ease-out;
 }
 
 #nav-bar{
-	@apply p-8
+	@apply p-8 ml-[100vw]
 }
 
 #nav-bar--logo{
@@ -87,6 +87,22 @@ nav{
 
 .nav-bar--buttons{
 	@apply w-full border-green-shade border rounded uppercase text-sm font-bold py-3 hover:bg-[#00a37e] hover:border-[#00a37e] hover:text-white
+}
+
+#nav-bar-products{
+	@apply ml-0 p-10 top-[4.5rem] bg-white pt-[3.1rem] hidden
+}
+
+.products--div{
+	@apply border-b border-slate-300 py-10
+}
+
+.nav-bar-products--header{
+	@apply text-xl text-black amerigo mb-2
+}
+
+.nav-bar-products--text{
+	@apply text-sm
 }
 
 

@@ -16,6 +16,9 @@ const planDuration = init('.plan--duration');
 const toggleMonthly = init('.toggle-div--monthly');
 const toggleYearly = init('.toggle-div--yearly');
 const checkBox = init('#checkbox');
+const navBarOptionsProduct = init('#nav-bar-options--product');
+const navBarProducts = init('nav-bar-products');
+
 
 const getStyleValue = (element, property) => parseInt(getComputedStyle(element, undefined).getPropertyValue(property));
 const nodeListArray = Array.from(footerSubTemplatesDropdown); //Array.from() converts the nodelist into an array
@@ -41,6 +44,10 @@ menuBox.onclick = () =>{
 	closeMenu.style.opacity = !getStyleValue(closeMenu, 'opacity') ? 1 : 0
 	nav.style.marginLeft = !getStyleValue(nav, 'margin-left') ? '100vw' : '0vw';
 }
+
+// navBarProduct.onclick = () =>{
+
+// }
 
 // checkBox.onclick = () =>{
 // 	checkBox.checked ? (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected')) : (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'))
