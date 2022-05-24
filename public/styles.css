@@ -1087,6 +1087,15 @@ ul>li::before {
   margin-top: 6rem;
 }
 
+#addons-section--div {
+  display: flex;
+  flex-direction: column;
+}
+
+.change-addons-section {
+  flex-direction: column-reverse !important;
+}
+
 #addons-section>p {
   font-family: 'AmerigoBT';
   margin-top: 3.75rem;

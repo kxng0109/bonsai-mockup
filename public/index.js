@@ -21,6 +21,8 @@ const normalAmount = init('#normal--amount');
 const plusAmount = init('#plus--amount');
 const plusPopular = init('#plus--popular');
 const normalPopular = init('#normal--popular');
+const addonsSectionDiv = init('#addons-section--div');
+const addonsPrice = init('.price')
 const checkBox = init('#checkbox');
 const navBarOptionsProduct = init('#first-nav-bar--options');
 const navBarProducts = init('#nav-bar-products');
@@ -72,6 +74,6 @@ navBarOptionsTemplates.onclick = () => {
 }
 
 checkBox.onclick = () =>{
-	checkBox.checked ? (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'), planDuration.forEach((element, index)=> planDuration[index].textContent = '/YEAR'), normalAmount.textContent = '192', plusAmount.textContent = '288', normalPopular.classList.toggle('popular'), plusPopular.classList.toggle('popular')) 
-	: (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'), planDuration.forEach((element, index)=> planDuration[index].textContent = '/MONTH'), normalAmount.textContent = '19', plusAmount.textContent = '29', normalPopular.classList.toggle('popular'), plusPopular.classList.toggle('popular'))
+	checkBox.checked ? (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'), planDuration.forEach((element, index)=> planDuration[index].textContent = '/YEAR'), normalAmount.textContent = '192', plusAmount.textContent = '288', normalPopular.classList.toggle('popular'), plusPopular.classList.toggle('popular'), addonsSectionDiv.classList.toggle('change-addons-section'), addonsPrice[0].textContent = '$100') 
+	: (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'), planDuration.forEach((element, index)=> planDuration[index].textContent = '/MONTH'), normalAmount.textContent = '19', plusAmount.textContent = '29', normalPopular.classList.toggle('popular'), plusPopular.classList.toggle('popular'), addonsSectionDiv.classList.toggle('change-addons-section'), addonsPrice[0].textContent = '$10')
 }

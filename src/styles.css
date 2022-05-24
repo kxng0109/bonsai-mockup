@@ -240,6 +240,14 @@ ul>li{
 	@apply mt-24
 }
 
+#addons-section--div{
+	@apply flex flex-col
+}
+
+.change-addons-section{
+	@apply flex-col-reverse !important
+}
+
 #addons-section>p{
 	@apply my-[3.75rem] text-[1.55rem] font-bold text-center amerigo leading-snug px-3
 }
