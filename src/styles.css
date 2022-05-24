@@ -89,8 +89,8 @@ nav{
 	@apply w-full border-green-shade border rounded uppercase text-sm font-bold py-3 hover:bg-[#00a37e] hover:border-[#00a37e] hover:text-white
 }
 
-#nav-bar-products{
-	@apply ml-0 p-10 top-[4.5rem] bg-white pt-[3.1rem] hidden
+#nav-bar-products, #nav-bar--bonsai-workflow, #nav-bar--templates{
+	@apply ml-0 p-10 top-[4.5rem] bg-white pt-[3.1rem]
 }
 
 .products--div{
@@ -103,6 +103,30 @@ nav{
 
 .nav-bar-products--text{
 	@apply text-sm
+}
+
+#nav-bar--bonsai-workflow{
+	@apply px-7 py-7
+}
+
+.nbbw-divs, .nav-bar-templates-examples{
+	@apply flex items-start font-semibold my-11 cursor-pointer
+}
+
+.nbbw-divs>ion-icon, .nav-bar-templates-examples>ion-icon{
+	@apply text-xl mr-2
+}
+
+.nbbw-divs>p{
+	@apply text-sm
+}
+
+#nav-bar--templates{
+	@apply px-11 py-7
+}
+
+.nav-bar-templates-examples{
+	@apply flex font-normal my-9
 }
 
 

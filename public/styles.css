@@ -768,10 +768,9 @@ nav {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-#nav-bar-products {
+#nav-bar-products, #nav-bar--bonsai-workflow, #nav-bar--templates {
   top: 4.5rem;
   margin-left: 0px;
-  display: none;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 2.5rem;
@@ -798,6 +797,47 @@ nav {
 .nav-bar-products--text {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+#nav-bar--bonsai-workflow {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.nbbw-divs, .nav-bar-templates-examples {
+  margin-top: 2.75rem;
+  margin-bottom: 2.75rem;
+  display: flex;
+  cursor: pointer;
+  align-items: flex-start;
+  font-weight: 600;
+}
+
+.nbbw-divs>ion-icon, .nav-bar-templates-examples>ion-icon {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.nbbw-divs>p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+#nav-bar--templates {
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.nav-bar-templates-examples {
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+  display: flex;
+  font-weight: 400;
 }
 
 #main {

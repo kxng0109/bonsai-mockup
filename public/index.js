@@ -4,6 +4,7 @@ const init = (selector, selectorType = 'querySelectorAll') => {
 	// if nothing is passed as an argument, querySelectorAll is chosen
 	return document[selectorType](selector)
 };
+const container = init('#container');
 const faqAnswers = init('.faqs--answers');
 const faqQuestionsDiv = init('.faqs--questions-div');
 const footerSubTemplatesName = init('.footer-sub-templates--name');
@@ -16,9 +17,13 @@ const planDuration = init('.plan--duration');
 const toggleMonthly = init('.toggle-div--monthly');
 const toggleYearly = init('.toggle-div--yearly');
 const checkBox = init('#checkbox');
-const navBarOptionsProduct = init('#nav-bar-options--product');
-const navBarProducts = init('nav-bar-products');
-
+const navBarOptionsProduct = init('#first-nav-bar--options');
+const navBarProducts = init('#nav-bar-products');
+const navBarBonsaiWorkflow = init('#nav-bar--bonsai-workflow');
+const productsDivBonsaiWorkflow = init('#products--div--bonsai-workflow');
+const navBarOptionsTemplates = init('#nav-bar-options--templates');
+const navBarTemplates = init('#nav-bar--templates');
+const navBarTemplatesExamples = init('.nav-bar-templates-examples');
 
 const getStyleValue = (element, property) => parseInt(getComputedStyle(element, undefined).getPropertyValue(property));
 const nodeListArray = Array.from(footerSubTemplatesDropdown); //Array.from() converts the nodelist into an array
@@ -43,12 +48,23 @@ menuBox.onclick = () =>{
 	openMenu.style.opacity = !getStyleValue(openMenu, 'opacity') ? 1 : 0
 	closeMenu.style.opacity = !getStyleValue(closeMenu, 'opacity') ? 1 : 0
 	nav.style.marginLeft = !getStyleValue(nav, 'margin-left') ? '100vw' : '0vw';
+	nav.style.backgroundColor = 'hsl(0 0% 100%)';
+	navBarProducts.classList.add('hidden');
+	navBarBonsaiWorkflow.classList.add('hidden')
+	navBarTemplates.classList.add('hidden')
 }
 
-// navBarProduct.onclick = () =>{
+navBarOptionsProduct.onclick = () =>{
+	nav.style.backgroundColor = 'hsl(0 0% 95%)';
+	navBarProducts.classList.toggle('hidden');
+}
 
-// }
+productsDivBonsaiWorkflow.onclick = () => navBarBonsaiWorkflow.classList.toggle('hidden');
 
+navBarOptionsTemplates.onclick = () => {
+	nav.style.backgroundColor = 'hsl(0 0% 95%)';
+	navBarTemplates.classList.toggle('hidden');
+}
 // checkBox.onclick = () =>{
 // 	checkBox.checked ? (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected')) : (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'))
 // }

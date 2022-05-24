@@ -23,12 +23,12 @@
 		<nav id="nav-bar">
 			<img src="./images/nav-logo.svg" id="nav-bar--logo">
 			<section>
-				<div class="nav-bar--options">
+				<div class="nav-bar--options" id="first-nav-bar--options">
 					<p id="nav-bar-options--product">Product</p>
 					<ion-icon name="chevron-down-outline"></ion-icon>
 				</div>
 
-				<div class="nav-bar--options">
+				<div class="nav-bar--options" id="nav-bar-options--templates">
 					<p>Templates</p>
 					<ion-icon name="chevron-down-outline"></ion-icon>
 				</div>
@@ -40,8 +40,8 @@
 			</section>
 		</nav>
 
-		<nav id="nav-bar-products">
-			<section class="products--div">
+		<nav id="nav-bar-products" class="hidden">
+			<section class="products--div" id="products--div--bonsai-workflow">
 				<p class="nav-bar-products--header">Bonsai Workflow</p>
 				<p class="nav-bar-products--text">Organize your business & look professional</p>
 			</section>
@@ -53,6 +53,68 @@
 				<p class="nav-bar-products--header">Bonsai Cash</p>
 				<p class="nav-bar-products--text">Manage your money with a no-fee business account</p>
 			</section>
+		</nav>
+
+		<nav id="nav-bar--bonsai-workflow" class="hidden">
+			<div class="nbbw-divs">
+				<ion-icon name="calculator-outline"></ion-icon>
+				<p>Invoices</p>
+			</div>
+			<div class="nbbw-divs">
+				<ion-icon name="reader-outline"></ion-icon>
+				<p>Proposals</p>
+			</div>
+			<div class="nbbw-divs">
+				<ion-icon name="reader-outline"></ion-icon>
+				<p>Contacts</p>
+			</div>
+			<div class="nbbw-divs">
+				<ion-icon name="people-outline"></ion-icon>
+				<p>Client CRM</p>
+			</div>
+			<div class="nbbw-divs">
+				<ion-icon name="reader-outline"></ion-icon>
+				<p>Forms & Automations</p>
+			</div>
+			<div class="nbbw-divs">
+				<ion-icon name="time-outline"></ion-icon>
+				<p>Time Tracking</p>
+			</div>
+			<div class="nbbw-divs">
+				<ion-icon name="calculator-outline"></ion-icon>
+				<p>Accounting</p>
+			</div>
+			<div class="nbbw-divs">
+				<ion-icon name="calculator-outline"></ion-icon>
+				<p>Task Tracking</p>
+			</div>
+		</nav>
+
+		<nav id="nav-bar--templates" class="hidden">
+			<div class="nav-bar-templates-examples">
+				<ion-icon name="reader-outline"></ion-icon>
+				<p>Contract Templates</p>
+			</div>
+			<div class="nav-bar-templates-examples">
+				<ion-icon name="reader-outline"></ion-icon>
+				<p>Proposal Templates</p>
+			</div>
+			<div class="nav-bar-templates-examples">
+				<ion-icon name="calculator-outline"></ion-icon>
+				<p>Invoice Templates</p>
+			</div>
+			<div class="nav-bar-templates-examples">
+				<ion-icon name="reader-outline"></ion-icon>
+				<p>Agreement Templates</p>
+			</div>
+			<div class="nav-bar-templates-examples">
+				<ion-icon name="reader-outline"></ion-icon>
+				<p>Quote Templates</p>
+			</div>
+			<div class="nav-bar-templates-examples">
+				<ion-icon name="time-outline"></ion-icon>
+				<p>Scope of Work Templates</p>
+			</div>
 		</nav>
 
 		<main id="main">
