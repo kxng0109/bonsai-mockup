@@ -18,23 +18,77 @@
 	}
 }
 
+/*@keyframes opacityChanger{
+	0%{
+		opacity: 1;
+	}
+
+	100%{
+		opacity: 0;
+	}
+}*/
+
 /*Change header to "will-change* property becuase it's onscroll 
 that the background changes from transparent to white*/
 header{
-	@apply z-2 fixed flex justify-between items-center px-10 py-2 inset-x-0 bg-white
+	@apply z-1 fixed flex justify-between items-center px-10 py-7 inset-x-0 bg-white
+}
+
+ion-icon{
+	transition: all 0.3s linear;
 }
 
 #logo{
 	@apply w-[9.4rem]
 }
 
+/*#menu-box{
+	@apply p-2 z-4
+}*/
+
 #menu-box{
-	@apply p-2
+	@apply z-4 fixed right-12 top-4 px-6 py-7
+}
+
+/*width 48, height 55*/
+#menu-box>*{
+	@apply absolute inset-0
 }
 
 #open-menu, #close-menu{
 	@apply text-5xl
 }
+
+
+nav{
+	@apply fixed z-1 inset-0 w-screen bg-white ml-[100vw];
+	transition: all 0.3s ease-out;
+}
+
+#nav-bar{
+	@apply p-8
+}
+
+#nav-bar--logo{
+	@apply w-10 mb-7
+}
+
+.nav-bar--options{
+	@apply flex items-center justify-between border-b border-slate-300 py-4 cursor-pointer mr-4
+}
+
+.nav-bar--options>p{
+	@apply text-grey-shade hover:text-black
+}
+
+.nav-bar--buttons:first-of-type{
+	@apply my-4
+}
+
+.nav-bar--buttons{
+	@apply w-full border-green-shade border rounded uppercase text-sm font-bold py-3 hover:bg-[#00a37e] hover:border-[#00a37e] hover:text-white
+}
+
 
 #main{
 	@apply px-5 pt-[8.8rem] 
