@@ -18,20 +18,14 @@
 	}
 }
 
-/*@keyframes opacityChanger{
-	0%{
-		opacity: 1;
-	}
-
-	100%{
-		opacity: 0;
-	}
-}*/
+#hero--image{
+	@apply rotate-[60deg] bg-green-shade w-[30rem] h-96 opacity-[0.05] absolute -top-10 -left-10
+}
 
 /*Change header to "will-change* property becuase it's onscroll 
 that the background changes from transparent to white*/
 header{
-	@apply z-1 fixed flex justify-between items-center px-10 py-7 inset-x-0 bg-white
+	@apply z-1 fixed flex justify-between items-center px-10 py-7 inset-x-0 custom-transition /*bg-white*/
 }
 
 ion-icon{
@@ -192,7 +186,7 @@ input:checked + .slider:before {
 
 
 .plan{
-	@apply mt-7 border border-slate-300 rounded relative overflow-hidden px-6 py-10
+	@apply mt-7 border border-slate-300 rounded relative overflow-hidden px-6 py-10 bg-white
 }
 
 .popular{
@@ -281,7 +275,7 @@ ul>li{
 	@apply text-center bg-[#f2faff] py-12 pt-10 my-[3.75rem] rounded
 }
 
-#third-section>p{
+#third-section>div>p{
 	@apply amerigo text-[1.6rem]
 }
 

@@ -6,6 +6,7 @@ const init = (selector, selectorType = 'querySelectorAll') => {
 	return document[selectorType](selector)
 };
 const container = init('#container');
+const header = init('#header')
 const faqAnswers = init('.faqs--answers');
 const faqQuestionsDiv = init('.faqs--questions-div');
 const footerSubTemplatesName = init('.footer-sub-templates--name');
@@ -23,6 +24,7 @@ const plusPopular = init('#plus--popular');
 const normalPopular = init('#normal--popular');
 const addonsSectionDiv = init('#addons-section--div');
 const addonsPrice = init('.price')
+const addonsFeatures = init('.addons-will-change');
 const checkBox = init('#checkbox');
 const navBarOptionsProduct = init('#first-nav-bar--options');
 const navBarProducts = init('#nav-bar-products');
@@ -74,6 +76,8 @@ navBarOptionsTemplates.onclick = () => {
 }
 
 checkBox.onclick = () =>{
-	checkBox.checked ? (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'), planDuration.forEach((element, index)=> planDuration[index].textContent = '/YEAR'), normalAmount.textContent = '192', plusAmount.textContent = '288', normalPopular.classList.toggle('popular'), plusPopular.classList.toggle('popular'), addonsSectionDiv.classList.toggle('change-addons-section'), addonsPrice[0].textContent = '$100') 
-	: (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'), planDuration.forEach((element, index)=> planDuration[index].textContent = '/MONTH'), normalAmount.textContent = '19', plusAmount.textContent = '29', normalPopular.classList.toggle('popular'), plusPopular.classList.toggle('popular'), addonsSectionDiv.classList.toggle('change-addons-section'), addonsPrice[0].textContent = '$10')
+	checkBox.checked ? (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'), planDuration.forEach((element, index)=> planDuration[index].textContent = '/YEAR'), normalAmount.textContent = '192', plusAmount.textContent = '288', normalPopular.classList.toggle('popular'), plusPopular.classList.toggle('popular'), addonsSectionDiv.classList.toggle('change-addons-section'), addonsPrice[2].textContent = '$100',  addonsPrice[1].textContent = '$90', addonsFeatures[0].textContent = 'Accounting & Tax Assistant', addonsFeatures[1].textContent = 'Manage your freelance finances and always be ready for tax season with easy-to-use accounting and tax tools.') 
+	: (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'), planDuration.forEach((element, index)=> planDuration[index].textContent = '/MONTH'), normalAmount.textContent = '19', plusAmount.textContent = '29', normalPopular.classList.toggle('popular'), plusPopular.classList.toggle('popular'), addonsSectionDiv.classList.toggle('change-addons-section'), addonsPrice[2].textContent = '$10',  addonsPrice[1].textContent = '$9', addonsFeatures[0].textContent = 'Bonsai Tax', addonsFeatures[1].textContent = 'Track expenses, identify write-offs, and estimate quarterly taxes easily.')
 }
+
+window.onscroll = () => header.style.backgroundColor =  document.documentElement.scrollTop > 10 &&  document.documentElement.scrollTop < 70 ? "rgb(255 255 255 / 50%)" : document.documentElement.scrollTop > 70 ? "rgb(255 255 255 / 100%)" : "transparent"
