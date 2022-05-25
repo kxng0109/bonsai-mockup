@@ -19,7 +19,7 @@
 }
 
 #hero--image{
-	@apply rotate-[60deg] bg-green-shade w-[30rem] h-96 opacity-[0.05] absolute -top-10 -left-10
+	@apply rotate-[60deg] bg-green-shade w-[30rem] h-96 opacity-[0.05] absolute -top-10 -left-10 xs:top-60 xs:-left-36 xs:w-[100rem]
 }
 
 /*Change header to "will-change* property becuase it's onscroll 
@@ -41,10 +41,9 @@ ion-icon{
 }*/
 
 #menu-box{
-	@apply z-4 fixed right-12 top-4 px-6 py-7
+	@apply z-4 fixed right-12 top-4 px-6 py-7 cursor-pointer
 }
 
-/*width 48, height 55*/
 #menu-box>*{
 	@apply absolute inset-0
 }
@@ -60,7 +59,7 @@ nav{
 }
 
 #nav-bar{
-	@apply p-8 ml-[100vw]
+	@apply p-8 ml-[100vw] xs:px-12
 }
 
 #nav-bar--logo{
@@ -133,7 +132,7 @@ nav{
 
 
 #main{
-	@apply px-5 pt-[8.8rem] 
+	@apply px-5 pt-[8.8rem] xs:px-6
 }
 
 #category{
@@ -173,11 +172,15 @@ input:checked + .slider:before {
 }
 
 #toggle-div{
-	@apply flex items-center justify-between px-16 mt-16 mb-11 relative
+	@apply flex items-center justify-center mt-16 mb-11 relative xs:ml-40
+}
+
+#toggle-div>p:last-of-type{
+	@apply mr-0
 }
 
 #toggle-div>p{
-	@apply uppercase font-semibold tracking-widest opacity-70
+	@apply uppercase font-semibold tracking-widest opacity-70 mx-6
 }
 
 .selected{
@@ -186,11 +189,11 @@ input:checked + .slider:before {
 
 
 .plan{
-	@apply mt-7 border border-slate-300 rounded relative overflow-hidden px-6 py-10 bg-white
+	@apply mt-7 border border-slate-300 rounded relative overflow-hidden px-6 py-10 bg-white xs:px-7 xs:pb-14
 }
 
 .popular{
-	@apply absolute -right-14 top-14 bg-green-shade text-white rotate-45 uppercase text-sm w-60 font-semibold tracking-wide h-7 flex justify-center items-center overflow-hidden
+	@apply absolute -right-14 top-14 bg-green-shade text-white rotate-45 uppercase text-sm w-60 font-semibold tracking-wide h-7 flex justify-center items-center overflow-hidden xs:h-10 xs:top-12 xs:text-lg
 }
 
 .plan--name{
@@ -272,15 +275,15 @@ ul>li{
 
 
 #third-section{
-	@apply text-center bg-[#f2faff] py-12 pt-10 my-[3.75rem] rounded
+	@apply text-center bg-[#f2faff] py-12 pt-10 my-[3.75rem] rounded px-7
 }
 
 #third-section>div>p{
-	@apply amerigo text-[1.6rem]
+	@apply amerigo text-[1.6rem] xs:text-[2.5rem] xs:leading-[3.3rem]
 }
 
 #third-section--start-btn{
-	@apply w-52 mt-4
+	@apply w-52 mt-4 xs:my-5 xs:mt-10
 }
 
 
@@ -289,7 +292,7 @@ ul>li{
 }
 
 .faqs--questions-div{
-	@apply flex items-center justify-between my-[1.125rem]
+	@apply flex items-center justify-between my-[1.125rem] cursor-pointer
 }
 
 .faqs--question{
@@ -306,7 +309,7 @@ ul>li{
 
 
 footer{
-	@apply px-1
+	@apply px-1 mb-20
 }
 
 .footer--section{

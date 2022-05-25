@@ -476,6 +476,12 @@ html {
   width: 100%;
 }
 
+@media (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
@@ -648,6 +654,14 @@ html {
   opacity: 0.05;
 }
 
+@media (min-width: 480px) {
+  #hero--image {
+    top: 15rem;
+    left: -9rem;
+    width: 100rem;
+  }
+}
+
 /*Change header to "will-change* property becuase it's onscroll 
 that the background changes from transparent to white*/
 
@@ -683,13 +697,12 @@ ion-icon{
   right: 3rem;
   top: 1rem;
   z-index: 4;
+  cursor: pointer;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
 }
-
-/*width 48, height 55*/
 
 #menu-box>* {
   position: absolute;
@@ -720,6 +733,13 @@ nav {
 #nav-bar {
   margin-left: 100vw;
   padding: 2rem;
+}
+
+@media (min-width: 480px) {
+  #nav-bar {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 #nav-bar--logo {
@@ -869,6 +889,13 @@ nav {
   padding-top: 8.8rem;
 }
 
+@media (min-width: 480px) {
+  #main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
 #category {
   font-family: 'AmerigoBT';
   text-align: center;
@@ -950,12 +977,22 @@ input:checked + .slider:before {
   margin-bottom: 2.75rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  justify-content: center;
+}
+
+@media (min-width: 480px) {
+  #toggle-div {
+    margin-left: 10rem;
+  }
+}
+
+#toggle-div>p:last-of-type {
+  margin-right: 0px;
 }
 
 #toggle-div>p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -982,6 +1019,14 @@ input:checked + .slider:before {
   padding-bottom: 2.5rem;
 }
 
+@media (min-width: 480px) {
+  .plan {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
 .popular {
   position: absolute;
   right: -3.5rem;
@@ -1003,6 +1048,15 @@ input:checked + .slider:before {
   letter-spacing: 0.025em;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 480px) {
+  .popular {
+    top: 3rem;
+    height: 2.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 .plan--name {
@@ -1165,6 +1219,8 @@ ul>li::before {
   --tw-bg-opacity: 1;
   background-color: rgb(242 250 255 / var(--tw-bg-opacity));
   padding-bottom: 3rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
   padding-top: 2.5rem;
   text-align: center;
 }
@@ -1174,9 +1230,23 @@ ul>li::before {
   font-size: 1.6rem;
 }
 
+@media (min-width: 480px) {
+  #third-section>div>p {
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+  }
+}
+
 #third-section--start-btn {
   margin-top: 1rem;
   width: 13rem;
+}
+
+@media (min-width: 480px) {
+  #third-section--start-btn {
+    margin-bottom: 1.25rem;
+    margin-top: 2.5rem;
+  }
 }
 
 #faq-section {
@@ -1188,6 +1258,7 @@ ul>li::before {
   margin-top: 1.125rem;
   margin-bottom: 1.125rem;
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: space-between;
 }
@@ -1220,6 +1291,7 @@ ul>li::before {
 }
 
 footer {
+  margin-bottom: 5rem;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
@@ -1304,4 +1376,16 @@ footer {
   flex-direction: column;
   overflow: hidden;
   padding-left: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .md\:right-12 {
+    right: 3rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .xs\:-right-4 {
+    right: -1rem;
+  }
 }
