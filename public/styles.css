@@ -662,9 +662,6 @@ html {
   }
 }
 
-/*Change header to "will-change* property becuase it's onscroll 
-that the background changes from transparent to white*/
-
 header{
   transition: height 0.2s linear;
   position: fixed;
@@ -674,10 +671,17 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
+  padding-left: 2.55rem;
+  padding-right: 2.55rem;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+@media (min-width: 480px) {
+  header {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
 }
 
 ion-icon{
@@ -886,21 +890,36 @@ nav {
 #main {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-  padding-top: 8.8rem;
+  padding-top: 8rem;
+}
+
+@media (min-width: 768px) {
+  #main {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 
 @media (min-width: 480px) {
   #main {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
 #category {
   font-family: 'AmerigoBT';
+  padding-top: 0.8rem;
   text-align: center;
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+@media (min-width: 480px) {
+  #category {
+    padding-top: 0px;
+    padding-bottom: 0.8rem;
+  }
 }
 
 /* The switch - the box around the slider */
@@ -982,7 +1001,8 @@ input:checked + .slider:before {
 
 @media (min-width: 480px) {
   #toggle-div {
-    margin-left: 10rem;
+    max-width: 580px;
+    justify-content: flex-end;
   }
 }
 
@@ -1021,8 +1041,8 @@ input:checked + .slider:before {
 
 @media (min-width: 480px) {
   .plan {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+    padding-left: 6%;
+    padding-right: 6%;
     padding-bottom: 3.5rem;
   }
 }
@@ -1376,12 +1396,6 @@ footer {
   flex-direction: column;
   overflow: hidden;
   padding-left: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .md\:right-12 {
-    right: 3rem;
-  }
 }
 
 @media (min-width: 480px) {
