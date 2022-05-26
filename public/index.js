@@ -64,14 +64,14 @@ menuBox.onclick = () =>{
 }
 
 navBarOptionsProduct.onclick = () =>{
-	nav.style.backgroundColor = 'hsl(0 0% 95%)';
+	nav.style.backgroundColor = 'hsl(0 0% 97%)';
 	navBarProducts.classList.toggle('hidden');
 }
 
 productsDivBonsaiWorkflow.onclick = () => navBarBonsaiWorkflow.classList.toggle('hidden');
 
 navBarOptionsTemplates.onclick = () => {
-	nav.style.backgroundColor = 'hsl(0 0% 95%)';
+	nav.style.backgroundColor = 'hsl(0 0% 97%)';
 	navBarTemplates.classList.toggle('hidden');
 }
 

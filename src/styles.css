@@ -19,11 +19,11 @@
 }
 
 #hero--image{
-	@apply rotate-[60deg] bg-green-shade w-[30rem] h-96 opacity-[0.05] absolute -top-10 -left-10 xs:top-60 xs:-left-36 xs:w-[100rem]
+	@apply rotate-[60deg] bg-green-shade w-[30rem] h-96 opacity-[0.05] absolute -top-10 -left-10 sm:top-60 sm:-left-36 sm:w-[100rem]
 }
 
 header{
-	@apply z-1 fixed flex justify-between items-center px-[2.55rem] py-[1.8rem] inset-x-0 custom-transition xs:px-[8%]
+	@apply z-1 fixed flex justify-between items-center px-[2.55rem] py-[1.8rem] inset-x-0 custom-transition sm:px-[8%] md:px-[10%]
 }
 
 ion-icon{
@@ -39,7 +39,7 @@ ion-icon{
 }*/
 
 #menu-box{
-	@apply z-4 fixed right-12 top-4 px-6 py-7 cursor-pointer
+	@apply z-4 fixed right-12 top-4 px-6 py-7 cursor-pointer sm:top-5 sm:right-14 md:right-[5.3rem]
 }
 
 #menu-box>*{
@@ -57,15 +57,19 @@ nav{
 }
 
 #nav-bar{
-	@apply p-8 ml-[100vw] xs:px-12
+	@apply p-8 ml-[100vw] sm:px-[3.1rem] md:px-10
 }
 
 #nav-bar--logo{
 	@apply w-10 mb-7
 }
 
+#nav-bar>section{
+	@apply sm:mt-11
+}
+
 .nav-bar--options{
-	@apply flex items-center justify-between border-b border-slate-300 py-4 cursor-pointer mr-4
+	@apply flex items-center justify-between border-b border-slate-300 py-4 cursor-pointer mr-4 sm:mr-6 md:mr-8;
 }
 
 .nav-bar--options>p{
@@ -73,7 +77,7 @@ nav{
 }
 
 .nav-bar--buttons:first-of-type{
-	@apply my-4
+	@apply my-4 sm:my-5
 }
 
 .nav-bar--buttons{
@@ -130,11 +134,15 @@ nav{
 
 
 #main{
-	@apply px-5 pt-32 xs:px-[5%] md:px-10 
+	@apply px-5 pt-32 sm:px-[5%] md:px-[5%] md:pt-28
 }
 
 #category{
-	@apply amerigo text-4xl pt-[0.8rem] text-center xs:pt-0 xs:pb-[0.8rem]
+	@apply amerigo text-4xl pt-[0.8rem] text-center sm:pt-1 sm:pb-[0.8rem] text-[38px]  
+}
+
+.plans-section>div:first-of-type{
+	@apply md:flex md:flex-row sm:max-w-[580px] md:justify-between md:items-center md:mt-[2.1rem] md:mb-[3.25rem]
 }
 
 /* The switch - the box around the slider */
@@ -170,7 +178,17 @@ input:checked + .slider:before {
 }
 
 #toggle-div{
-	@apply flex items-center justify-center mt-16 mb-11 relative xs:justify-end xs:max-w-[580px]
+	@apply flex items-center justify-center mt-16 mb-11 relative sm:justify-end sm:mb-10 sm:mt-[3.75rem]
+}
+
+@media (min-width: 768px){
+	#toggle-div{
+		@apply md:my-0 md:mt-2
+	}
+}
+
+#toggle-div>p:first-of-type{
+	@apply ml-0
 }
 
 #toggle-div>p:last-of-type{
@@ -178,7 +196,11 @@ input:checked + .slider:before {
 }
 
 #toggle-div>p{
-	@apply uppercase font-semibold tracking-widest opacity-70 mx-6
+	@apply uppercase font-semibold tracking-widest opacity-70 mx-[1.6rem] text-[17px] tracking-widest
+}
+
+#toggle-div--yearly{
+	@apply text-base !important
 }
 
 .selected{
@@ -187,11 +209,11 @@ input:checked + .slider:before {
 
 
 .plan{
-	@apply mt-7 border border-slate-300 rounded relative overflow-hidden px-6 py-10 bg-white xs:px-[6%] xs:pb-14
+	@apply mt-7 border border-slate-300 rounded relative overflow-hidden px-6 py-10 bg-white sm:px-[6.5%] sm:pb-14
 }
 
 .popular{
-	@apply absolute -right-14 top-14 bg-green-shade text-white rotate-45 uppercase text-sm w-60 font-semibold tracking-wide h-7 flex justify-center items-center overflow-hidden xs:h-10 xs:top-12 xs:text-lg
+	@apply absolute -right-14 top-14 bg-green-shade text-white rotate-45 uppercase text-sm w-60 font-semibold tracking-wide h-7 flex justify-center items-center overflow-hidden sm:h-10 sm:top-12 sm:text-lg
 }
 
 .plan--name{
@@ -199,11 +221,11 @@ input:checked + .slider:before {
 }
 
 .plan--price{
-	@apply py-5 flex items-center relative
+	@apply py-5 flex items-center relative md:pb-6
 }
 
 .plan-price--amount{
-	@apply text-7xl font-semibold ml-3 mr-4
+	@apply text-7xl font-semibold ml-3 mr-4 md:text-[3.875rem]
 }
 
 sup{
@@ -219,7 +241,7 @@ sub{
 }
 
 ul>li{
-	@apply my-4 before:content-[url('./images/check.svg')] before:mr-2
+	@apply my-4 before:content-[url('./images/check.svg')] before:mr-3 md:my-[1.05rem]
 }
 
 .start-plan-btn{
@@ -227,12 +249,12 @@ ul>li{
 }
 
 .plan-features--new-feature{
-	@apply after:content-['New'] after:text-white after:bg-yellow-shade after:rounded after:text-xs after:p-[3px] after:px-[5px] after:ml-2
+	@apply after:content-['New'] after:text-white after:bg-yellow-shade after:rounded after:text-sm after:p-[3px] after:px-[5px] after:ml-2
 }
 
 
 #addons-section{
-	@apply mt-24
+	@apply mt-24 sm:mt-32
 }
 
 #addons-section--div{
@@ -244,53 +266,75 @@ ul>li{
 }
 
 #addons-section>p{
-	@apply my-[3.75rem] text-[1.55rem] font-bold text-center amerigo leading-snug px-3
+	@apply my-[3.75rem] text-[1.55rem] font-bold text-center amerigo leading-snug px-3 sm:mb-20 md:text-[2rem]
 }
 
 .addons-div{
-	@apply bg-white rounded px-10 py-5 mb-3
+	@apply bg-white rounded px-10 py-5 mb-3 flex flex-col md:flex-row-reverse md:justify-between md:py-7 md:items-center
+}
+
+#addons-div--free{
+	@apply md:pb-6;
 }
 
 .different{
-	@apply px-7 pr-0
+	@apply px-7 pr-0 sm:px-10
 }
 
 .price{
-	@apply text-3xl font-semibold
+	@apply text-3xl font-semibold sm:pt-2 md:text-[2.75rem]
+}
+
+#free-addon{
+	@apply text-4xl sm:pt-3
+}
+
+.addons .plan--duration{
+	@apply text-sm md:mt-2
 }
 
 .addons-features{
-	@apply mt-4 mb-2
+	@apply mt-4 mb-2 md:mr-10
 }
 
 .addons-features>p:first-child{
 	@apply text-2xl font-semibold
 }
 
-.addons-features>p:last-child{
+.addons-features>p:last-of-type{
 	@apply font-light
 }
 
 
 #third-section{
-	@apply text-center bg-[#f2faff] py-12 pt-10 my-[3.75rem] rounded px-7
+	@apply text-center bg-[#f2faff] py-12 pt-10 my-[3.75rem] rounded px-7 md:mt-[5.3rem]
+}
+
+@media (min-width: 926px){
+	#third-section{
+		@apply flex justify-center pt-16
+	}
 }
 
 #third-section>div>p{
-	@apply amerigo text-[1.6rem] xs:text-[2.5rem] xs:leading-[3.3rem]
+	@apply amerigo text-[1.6rem] sm:text-[2.5rem] sm:leading-[3.3rem] md:text-[2.75rem] md:leading-[3.75rem]
 }
 
 #third-section--start-btn{
-	@apply w-52 mt-4 xs:my-5 xs:mt-10
+	@apply w-52 mt-4 sm:my-5 sm:mt-10
 }
 
 
 #faq-section{
-	@apply pl-5 mb-16
+	@apply pl-5 mb-16 sm:px-[4.5%] md:px-[7%] md:max-w-[720px] md:mx-auto
 }
 
 .faqs--questions-div{
-	@apply flex items-center justify-between my-[1.125rem] cursor-pointer
+	@apply flex items-center justify-between my-2 cursor-pointer
+}
+
+.faqs--questions-div:hover .faqs--question{
+	@apply text-green-shade
 }
 
 .faqs--question{
@@ -302,20 +346,28 @@ ul>li{
 }
 
 .faqs--answers{
-	@apply h-0 overflow-hidden custom-transition text-sm leading-6 pr-[1.125rem]
+	@apply h-0 overflow-hidden custom-transition text-sm leading-6 pr-[1.125rem] md:text-base
 }
 
 
 footer{
-	@apply px-1 mb-20
+	@apply px-1 mb-20 md:flex md:flex-row md:justify-between md:flex
 }
 
 .footer--section{
-	@apply mb-10
+	@apply mb-10 md:w-fit md:flex-1
+}
+
+/*.footer--section:nth-of-type(2){
+	@apply ml-[7.5rem] flex-1
+}*/
+
+.footer--section:nth-of-type(3){
+	@apply flex-none
 }
 
 .footer-sections--header{
-	@apply uppercase font-semibold text-lg my-6
+	@apply uppercase font-semibold text-lg my-6 md:my-10;
 }
 
 .footer-links-div{
@@ -323,7 +375,7 @@ footer{
 }
 
 .footer-section--links{
-	@apply text-grey-shade active:text-black font-thin mb-2 w-fit
+	@apply text-grey-shade active:text-black font-thin mb-2 w-fit hover:text-black
 }
 
 .footer-links-div+div{
@@ -356,4 +408,21 @@ footer{
 
 .footer-sub-templates--dropdown{
 	@apply flex flex-col pl-2 overflow-hidden custom-transition
+}
+
+
+@media (min-width: 992px) and (max-width: 1100px){
+	.plans-section{
+		max-width: 701px;
+		padding-left: 6px;
+		margin: 0 auto;
+	}
+
+	#the-plans{
+		@apply grid grid-cols-2 gap-x-7
+	}
+
+	.plan{
+		@apply px-10
+	}
 }

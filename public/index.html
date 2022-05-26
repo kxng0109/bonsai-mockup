@@ -10,7 +10,7 @@
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
 	<title>Pricing - Bonsai Freelance Solution</title>
 </head>
-<body class="text-grey-shade bg-[#fbfbfb]"><!-- bg-[#fdfdfe] -->
+<body class="text-grey-shade bg-[#f3f3f7]"><!-- bg-[#fdfdfe, #fbfbfb] -->
 	<div id="container" class="relative overflow-x-hidden">
 		<div id="hero--image"></div>
 		<header id="header">
@@ -126,71 +126,75 @@
 
 		<main id="main">
 			<section class="plans-section">
-				<p id="category">Plans & Pricing</p>
-				<div id="toggle-div">
-					<p id="toggle-div--monthly" class="selected">Monthly</p>
-					<!-- Toogle Switch courtesy w3schools -->
-					<label class="switch">
-						<input type="checkbox" id="checkbox">
-						<span class="slider round"></span>
-					</label>
-					<p id="toggle-div--yearly">Yearly</p>
-					<img src="./images/2-months-free.svg" class="absolute right-0 -top-9 xs:-right-4">
+				<div>
+					<p id="category">Plans & Pricing</p>
+					<div id="toggle-div">
+						<p id="toggle-div--monthly" class="selected">Monthly</p>
+						<!-- Toogle Switch courtesy w3schools -->
+						<label class="switch">
+							<input type="checkbox" id="checkbox">
+							<span class="slider round"></span>
+						</label>
+						<p id="toggle-div--yearly">Yearly</p>
+						<img src="./images/2-months-free.svg" class="absolute right-0 -top-9 sm:-right-6">
+					</div>
 				</div>
 
-				<div id="workflow-normal" class="plan">
-					<div class="hidden" id="normal--popular"><!-- hidden by default change to 'popular' when yearly is toggled -->
-						<p class="popular--text">Most Popular</p>
+				<div id="the-plans">
+					<div id="workflow-normal" class="plan">
+						<div class="hidden" id="normal--popular"><!-- hidden by default change to 'popular' when yearly is toggled -->
+							<p class="popular--text">Most Popular</p>
+						</div>
+						<p class="plan--name">Workflow</p>
+						<div class="plan--price">
+							<sup>$</sup>
+							<p class="plan-price--amount" id="normal--amount">19</p>
+							<sub class="plan--duration">/MONTH</sub>
+						</div>
+						<ul class="plan-features">
+							<li>Unlimited Clients & Projects</li>
+							<li>Proposals</li>
+							<li>Contracts</li>
+							<li>Invoicing & Payments</li>
+							<li>Client CRM</li>
+							<li>Project Management</li>
+							<li>Task & Time Tracking</li>
+							<li>iOS, Android, Chrome, & Mac Apps</li>
+						</ul>				
+						<button type="submit" class="start-plan-btn">START FREE</button>
 					</div>
-					<p class="plan--name">Workflow</p>
-					<div class="plan--price">
-						<sup>$</sup>
-						<p class="plan-price--amount" id="normal--amount">19</p>
-						<sub class="plan--duration">/MONTH</sub>
-					</div>
-					<ul class="plan-features">
-						<li>Unlimited Clients & Projects</li>
-						<li>Proposals</li>
-						<li>Contracts</li>
-						<li>Invoicing & Payments</li>
-						<li>Client CRM</li>
-						<li>Project Management</li>
-						<li>Task & Time Tracking</li>
-						<li>iOS, Android, Chrome, & Mac Apps</li>
-					</ul>				
-					<button type="submit" class="start-plan-btn">START FREE</button>
-				</div>
 
-				<div id="workflow-plus" class="plan">
-					<div class="hidden popular" id="plus--popular">
-						<p class="popular--text">Most Popular</p>
+					<div id="workflow-plus" class="plan">
+						<div class="hidden popular" id="plus--popular">
+							<p class="popular--text">Most Popular</p>
+						</div>
+						<p class="plan--name">Workflow Plus</p>
+						<div class="plan--price">
+							<sup>$</sup>
+							<p class="plan-price--amount" id="plus--amount">29</p>
+							<sub class="plan--duration">/MONTH</sub>
+						</div>
+						<ul class="plan-features">
+							<li>Everything in Workfloe, plus,,,</li>
+							<li>White-labelled client experience</li>
+							<li class="plan-features--new-feature">Client forms and questionnaires</li>
+							<li>Workflow automations</li>
+							<li>Subcontracting (client-mode)</li>
+							<li>Calendly integration</li>
+							<li>Client portal</li>
+							<li>Priority support</li>
+						</ul>				
+						<button type="submit" class="start-plan-btn">START FREE</button>
 					</div>
-					<p class="plan--name">Workflow Plus</p>
-					<div class="plan--price">
-						<sup>$</sup>
-						<p class="plan-price--amount" id="plus--amount">29</p>
-						<sub class="plan--duration">/MONTH</sub>
-					</div>
-					<ul class="plan-features">
-						<li>Everything in Workfloe, plus,,,</li>
-						<li>White-labelled client experience</li>
-						<li class="plan-features--new-feature">Client forms and questionnaires</li>
-						<li>Workflow automations</li>
-						<li>Subcontracting (client-mode)</li>
-						<li>Calendly integration</li>
-						<li>Client portal</li>
-						<li>Priority support</li>
-					</ul>				
-					<button type="submit" class="start-plan-btn">START FREE</button>
 				</div>
 			</section>
 
 			<section id="addons-section">
 				<p>Super charge your work with add-ons</p>
 				<div id="addons-section--div">
-					<div class="addons-div">
+					<div class="addons-div" id="addons-div--free">
 						<div id="free" class="addons text-4xl">
-							<p class="price">Free</p>
+							<p class="price" id="free-addon">Free</p>
 						</div>
 						<div class="addons-features">
 							<p>Collaborators</p>
@@ -210,15 +214,15 @@
 					</div>
 
 					<div class="addons-div different">
-						<div class="addons">
+						<div class="addons  md:flex md:flex-col md:items-center">
 							<p class="price">$10</p>
 							<p class="plan--duration">/MONTH</p>
 						</div>
 						<div class="addons-features">
 							<p class="addons-will-change">Bonsai Tax</p>
 							<p class="addons-will-change">Track expenses, identify write-offs, and estimate quarterly taxes easily.</p>
+							<a href="#" class="text-green-shade uppercase flex items-center text-sm font-semibold mb-2 mt-2 w-fit">Learn more<ion-icon name="chevron-forward-outline" class="pl-1 "></ion-icon></a>
 						</div>
-						<a href="#" class="text-green-shade uppercase flex items-center text-sm font-semibold mb-2 w-fit">Learn more<ion-icon name="chevron-forward-outline" class="pl-1"></ion-icon></a>
 					</div>
 				</div>
 			</section>
@@ -232,7 +236,7 @@
 			</section>
 
 			<section id="faq-section">
-				<p class="text-center text-green-shade text-2xl font-bold my-10">Frequently Asked Questions</p>
+				<p class="text-center text-green-shade text-2xl font-bold my-10 md:text-[2rem]">Frequently Asked Questions</p>
 				<div class="faqs">
 					<div class="faqs--questions-div">
 						<p class="faqs--question">How does the 14 day free trial work?</p>
