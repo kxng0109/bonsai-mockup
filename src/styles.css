@@ -23,7 +23,7 @@
 }
 
 header{
-	@apply z-1 fixed flex justify-between items-center px-[2.55rem] py-[1.8rem] inset-x-0 custom-transition sm:px-[8%] md:px-[10%] lg:bg-white lg:max-h-[76px] lg:px-4;
+	@apply z-1 fixed flex /*justify-between*/ items-center px-[2.55rem] py-[1.8rem] inset-x-0 custom-transition sm:px-[8%] md:px-[10%] lg:bg-white lg:max-h-[76px] lg:px-10;
 }
 
 ion-icon{
@@ -31,11 +31,31 @@ ion-icon{
 }
 
 #logo{
-	@apply w-[9.4rem]
+	@apply w-[9.4rem] lg:w-[6.4rem]
 }
 
 #header-nav{
-	@apply hidden lg:flex
+	@apply hidden ml-auto mr-12 lg:flex
+}
+
+#header-nav ion-icon{
+	@apply ml-2 text-base
+}
+
+#header-nav .nav-bar--options{
+	@apply mr-10 text-[1.0625rem]
+}
+
+.header-nav--options{
+	@apply w-fit px-6 py-2 text-[0.8rem] tracking-wider hidden lg:block !important
+}
+
+.header-nav--options:last-of-type{
+	@apply px-7 ml-4 !important
+}
+
+#header-buttons{
+	@apply flex
 }
 
 /*#menu-box{
@@ -73,7 +93,7 @@ nav{
 }
 
 .nav-bar--options{
-	@apply flex items-center justify-between border-b border-slate-300 py-4 cursor-pointer mr-4 sm:mr-6 md:mr-8
+	@apply flex items-center justify-between border-b border-slate-300 py-4 cursor-pointer mr-4 sm:mr-6 md:mr-8 lg:m-0 lg:border-0
 }
 
 .nav-bar--options>p{
@@ -81,7 +101,7 @@ nav{
 }
 
 .nav-bar--buttons:first-of-type{
-	@apply my-4 sm:my-5
+	@apply my-4 sm:my-5 lg:m-0
 }
 
 .nav-bar--buttons{
@@ -145,12 +165,12 @@ nav{
 	@apply amerigo text-4xl pt-[0.8rem] text-center sm:pt-1 sm:pb-[0.8rem] text-[38px]  
 }
 
-.plans-section{
+.plans-section, #addons-section, #third-section, footer{
 	@apply lg:max-w-[701px] lg:pl-[6px] lg:mx-auto;
 }
 
 .plans-section>div:first-of-type{
-	@apply md:flex md:flex-row sm:max-w-[580px] md:justify-between md:items-center md:mt-[2.1rem] md:mb-[3.25rem]
+	@apply md:flex md:flex-row sm:max-w-[580px] md:justify-between md:items-center md:mt-[2.1rem] md:mb-[3.25rem] lg:mt-24 lg:mb-6
 }
 
 /* The switch - the box around the slider */
@@ -221,7 +241,7 @@ input:checked + .slider:before {
 	}
 
 .plan{
-	@apply mt-7 border border-slate-300 rounded relative overflow-hidden px-6 py-10 bg-white sm:px-[6.5%] sm:pb-14 lg:px-10
+	@apply mt-7 border border-slate-300 rounded relative overflow-hidden px-6 py-10 bg-white sm:px-[6.5%] sm:pb-14 lg:px-12 lg:py-8
 }
 
 .popular{
@@ -253,7 +273,7 @@ sub{
 }
 
 ul>li{
-	@apply my-4 before:content-[url('./images/check.svg')] before:mr-3 md:my-[1.05rem]
+	@apply my-4 flex items-center before:content-[url('./images/check.svg')] before:mr-3 md:my-[1.05rem]
 }
 
 .start-plan-btn{
@@ -319,12 +339,12 @@ ul>li{
 
 
 #third-section{
-	@apply text-center bg-[#f2faff] py-12 pt-10 my-[3.75rem] rounded px-7 md:mt-[5.3rem]
+	@apply text-center bg-[#f2faff] py-12 pt-10 my-[3.75rem] rounded px-7 md:mt-[5.3rem] lg:px-[4.75rem] lg:text-left lg:py-[6.75rem]
 }
 
 @media (min-width: 926px){
 	#third-section{
-		@apply flex justify-center pt-16
+		@apply flex justify-center
 	}
 }
 
@@ -333,12 +353,12 @@ ul>li{
 }
 
 #third-section--start-btn{
-	@apply w-52 mt-4 sm:my-5 sm:mt-10
+	@apply w-52 mt-4 sm:my-5 sm:mt-10 lg:px-14 lg:max-h-[84px]
 }
 
 
 #faq-section{
-	@apply pl-5 mb-16 sm:px-[4.5%] md:px-[7%] md:max-w-[720px] md:mx-auto
+	@apply pl-5 mb-16 sm:px-[4.5%] md:px-[7%] md:max-w-[720px] md:mx-auto lg:max-w-full
 }
 
 .faqs--questions-div{
@@ -358,12 +378,12 @@ ul>li{
 }
 
 .faqs--answers{
-	@apply h-0 overflow-hidden custom-transition text-sm leading-6 pr-[1.125rem] md:text-base
+	@apply h-0 overflow-hidden custom-transition text-sm leading-6 pr-[1.125rem] md:text-base lg:leading-relaxed lg:pr-0
 }
 
 
 footer{
-	@apply px-1 mb-20 md:flex md:flex-row md:justify-between md:flex
+	@apply px-1 mb-20 md:flex md:flex-row md:justify-between md:flex lg:px-3
 }
 
 .footer--section{

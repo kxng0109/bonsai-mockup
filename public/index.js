@@ -42,6 +42,7 @@ let initialHeight = nodeListArray.map(data =>{
 
 faqQuestionsDiv.forEach((element, index) =>{
 	faqQuestionsDiv[index].onclick = () =>{
+		faqAnswers[index].classList.toggle('my-5')
 		faqAnswers[index].style.height = !getStyleValue(faqAnswers[index], 'height') ? 'auto' : '0px';
 	}
 })

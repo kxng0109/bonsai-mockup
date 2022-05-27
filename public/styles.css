@@ -527,6 +527,11 @@ html {
   margin-bottom: 2.5rem;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -663,7 +668,6 @@ header{
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding-left: 2.55rem;
   padding-right: 2.55rem;
   padding-top: 1.8rem;
@@ -689,8 +693,8 @@ header{
     max-height: 76px;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -702,7 +706,15 @@ ion-icon{
   width: 9.4rem;
 }
 
+@media (min-width: 992px) {
+  #logo {
+    width: 6.4rem;
+  }
+}
+
 #header-nav {
+  margin-left: auto;
+  margin-right: 3rem;
   display: none;
 }
 
@@ -710,6 +722,46 @@ ion-icon{
   #header-nav {
     display: flex;
   }
+}
+
+#header-nav ion-icon {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+#header-nav .nav-bar--options {
+  margin-right: 2.5rem;
+  font-size: 1.0625rem;
+}
+
+.header-nav--options {
+  display: none !important;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.05em !important;
+}
+
+@media (min-width: 992px) {
+  .header-nav--options {
+    display: block !important;
+  }
+}
+
+.header-nav--options:last-of-type {
+  margin-left: 1rem !important;
+  padding-left: 1.75rem !important;
+  padding-right: 1.75rem !important;
+}
+
+#header-buttons {
+  display: flex;
 }
 
 /*#menu-box{
@@ -846,6 +898,13 @@ nav {
   }
 }
 
+@media (min-width: 992px) {
+  .nav-bar--options {
+    margin: 0px;
+    border-width: 0px;
+  }
+}
+
 .nav-bar--options>p {
   --tw-text-opacity: 1;
   color: rgb(76 77 95 / var(--tw-text-opacity));
@@ -865,6 +924,12 @@ nav {
   .nav-bar--buttons:first-of-type {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-bar--buttons:first-of-type {
+    margin: 0px;
   }
 }
 
@@ -1020,7 +1085,7 @@ nav {
 }
 
 @media (min-width: 992px) {
-  .plans-section {
+  .plans-section, #addons-section, #third-section, footer {
     margin-left: auto;
     margin-right: auto;
     max-width: 701px;
@@ -1042,6 +1107,13 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 992px) {
+  .plans-section>div:first-of-type {
+    margin-top: 6rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -1202,8 +1274,10 @@ input:checked + .slider:before {
 
 @media (min-width: 992px) {
   .plan {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -1301,6 +1375,8 @@ sub {
 ul>li {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 ul>li::before {
@@ -1511,11 +1587,20 @@ ul>li::before {
   }
 }
 
+@media (min-width: 992px) {
+  #third-section {
+    padding-left: 4.75rem;
+    padding-right: 4.75rem;
+    padding-top: 6.75rem;
+    padding-bottom: 6.75rem;
+    text-align: left;
+  }
+}
+
 @media (min-width: 926px){
   #third-section {
     display: flex;
     justify-content: center;
-    padding-top: 4rem;
   }
 }
 
@@ -1550,6 +1635,14 @@ ul>li::before {
   }
 }
 
+@media (min-width: 992px) {
+  #third-section--start-btn {
+    max-height: 84px;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
 #faq-section {
   margin-bottom: 4rem;
   padding-left: 1.25rem;
@@ -1569,6 +1662,12 @@ ul>li::before {
     max-width: 720px;
     padding-left: 7%;
     padding-right: 7%;
+  }
+}
+
+@media (min-width: 992px) {
+  #faq-section {
+    max-width: 100%;
   }
 }
 
@@ -1620,6 +1719,13 @@ ul>li::before {
   }
 }
 
+@media (min-width: 992px) {
+  .faqs--answers {
+    padding-right: 0px;
+    line-height: 1.625;
+  }
+}
+
 footer {
   margin-bottom: 5rem;
   padding-left: 0.25rem;
@@ -1631,6 +1737,13 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 992px) {
+  footer {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
