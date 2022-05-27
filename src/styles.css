@@ -23,7 +23,7 @@
 }
 
 header{
-	@apply z-1 fixed flex justify-between items-center px-[2.55rem] py-[1.8rem] inset-x-0 custom-transition sm:px-[8%] md:px-[10%]
+	@apply z-1 fixed flex justify-between items-center px-[2.55rem] py-[1.8rem] inset-x-0 custom-transition sm:px-[8%] md:px-[10%] lg:bg-white lg:max-h-[76px] lg:px-4;
 }
 
 ion-icon{
@@ -34,12 +34,16 @@ ion-icon{
 	@apply w-[9.4rem]
 }
 
+#header-nav{
+	@apply hidden lg:flex
+}
+
 /*#menu-box{
 	@apply p-2 z-4
 }*/
 
 #menu-box{
-	@apply z-4 fixed right-12 top-4 px-6 py-7 cursor-pointer sm:top-5 sm:right-14 md:right-[5.3rem]
+	@apply z-4 fixed right-12 top-4 px-6 py-7 cursor-pointer sm:top-5 sm:right-14 md:right-[5.3rem] lg:hidden
 }
 
 #menu-box>*{
@@ -57,19 +61,19 @@ nav{
 }
 
 #nav-bar{
-	@apply p-8 ml-[100vw] sm:px-[3.1rem] md:px-10
+	@apply p-8 ml-[100vw] sm:px-[3.1rem] md:px-10 lg:hidden
 }
 
 #nav-bar--logo{
-	@apply w-10 mb-7
+	@apply w-10 mb-7 lg:hidden
 }
 
 #nav-bar>section{
-	@apply sm:mt-11
+	@apply sm:mt-11 lg:flex
 }
 
 .nav-bar--options{
-	@apply flex items-center justify-between border-b border-slate-300 py-4 cursor-pointer mr-4 sm:mr-6 md:mr-8;
+	@apply flex items-center justify-between border-b border-slate-300 py-4 cursor-pointer mr-4 sm:mr-6 md:mr-8
 }
 
 .nav-bar--options>p{
@@ -85,7 +89,7 @@ nav{
 }
 
 #nav-bar-products, #nav-bar--bonsai-workflow, #nav-bar--templates{
-	@apply ml-0 p-10 top-[4.5rem] bg-white pt-[3.1rem]
+	@apply ml-0 p-10 top-[4.5rem] bg-white pt-[3.1rem]  lg:hidden
 }
 
 .products--div{
@@ -139,6 +143,10 @@ nav{
 
 #category{
 	@apply amerigo text-4xl pt-[0.8rem] text-center sm:pt-1 sm:pb-[0.8rem] text-[38px]  
+}
+
+.plans-section{
+	@apply lg:max-w-[701px] lg:pl-[6px] lg:mx-auto;
 }
 
 .plans-section>div:first-of-type{
@@ -208,8 +216,12 @@ input:checked + .slider:before {
 }
 
 
+#the-plans{
+		@apply lg:grid lg:grid-cols-2 lg:gap-x-7
+	}
+
 .plan{
-	@apply mt-7 border border-slate-300 rounded relative overflow-hidden px-6 py-10 bg-white sm:px-[6.5%] sm:pb-14
+	@apply mt-7 border border-slate-300 rounded relative overflow-hidden px-6 py-10 bg-white sm:px-[6.5%] sm:pb-14 lg:px-10
 }
 
 .popular{
@@ -412,17 +424,4 @@ footer{
 
 
 @media (min-width: 992px) and (max-width: 1100px){
-	.plans-section{
-		max-width: 701px;
-		padding-left: 6px;
-		margin: 0 auto;
-	}
-
-	#the-plans{
-		@apply grid grid-cols-2 gap-x-7
-	}
-
-	.plan{
-		@apply px-10
-	}
 }

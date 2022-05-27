@@ -488,9 +488,9 @@ html {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .container {
-    max-width: 1024px;
+    max-width: 992px;
   }
 }
 
@@ -684,12 +684,32 @@ header{
   }
 }
 
+@media (min-width: 992px) {
+  header {
+    max-height: 76px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 ion-icon{
   transition: all 0.3s linear;
 }
 
 #logo {
   width: 9.4rem;
+}
+
+#header-nav {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  #header-nav {
+    display: flex;
+  }
 }
 
 /*#menu-box{
@@ -718,6 +738,12 @@ ion-icon{
 @media (min-width: 768px) {
   #menu-box {
     right: 5.3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #menu-box {
+    display: none;
   }
 }
 
@@ -766,14 +792,32 @@ nav {
   }
 }
 
+@media (min-width: 992px) {
+  #nav-bar {
+    display: none;
+  }
+}
+
 #nav-bar--logo {
   margin-bottom: 1.75rem;
   width: 2.5rem;
 }
 
+@media (min-width: 992px) {
+  #nav-bar--logo {
+    display: none;
+  }
+}
+
 @media (min-width: 480px) {
   #nav-bar>section {
     margin-top: 2.75rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #nav-bar>section {
+    display: flex;
   }
 }
 
@@ -854,6 +898,12 @@ nav {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 2.5rem;
   padding-top: 3.1rem;
+}
+
+@media (min-width: 992px) {
+  #nav-bar-products, #nav-bar--bonsai-workflow, #nav-bar--templates {
+    display: none;
+  }
 }
 
 .products--div {
@@ -967,7 +1017,18 @@ nav {
     padding-top: 0.25rem;
     padding-bottom: 0.8rem;
   }
+}
 
+@media (min-width: 992px) {
+  .plans-section {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 701px;
+    padding-left: 6px;
+  }
+}
+
+@media (min-width: 480px) {
   .plans-section>div:first-of-type {
     max-width: 580px;
   }
@@ -1106,6 +1167,15 @@ input:checked + .slider:before {
   opacity: 1 !important;
 }
 
+@media (min-width: 992px) {
+  #the-plans {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    -moz-column-gap: 1.75rem;
+         column-gap: 1.75rem;
+  }
+}
+
 .plan {
   position: relative;
   margin-top: 1.75rem;
@@ -1127,6 +1197,13 @@ input:checked + .slider:before {
     padding-left: 6.5%;
     padding-right: 6.5%;
     padding-bottom: 3.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .plan {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -1669,23 +1746,6 @@ footer {
 }
 
 @media (min-width: 992px) and (max-width: 1100px){
-  .plans-section{
-    max-width: 701px;
-    padding-left: 6px;
-    margin: 0 auto;
-  }
-
-  #the-plans {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    -moz-column-gap: 1.75rem;
-         column-gap: 1.75rem;
-  }
-
-  .plan {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
 }
 
 @media (min-width: 480px) {

@@ -53,26 +53,33 @@ footerSubTemplatesName.forEach((element, index) =>{
 	}
 });
 
-menuBox.onclick = () =>{
-	openMenu.style.opacity = !getStyleValue(openMenu, 'opacity') ? 1 : 0
-	closeMenu.style.opacity = !getStyleValue(closeMenu, 'opacity') ? 1 : 0
-	nav.style.marginLeft = !getStyleValue(nav, 'margin-left') ? '100vw' : '0vw';
-	nav.style.backgroundColor = 'hsl(0 0% 100%)';
-	navBarProducts.classList.add('hidden');
-	navBarBonsaiWorkflow.classList.add('hidden')
-	navBarTemplates.classList.add('hidden')
-}
+switch (true) {
+	case screen.width >= 992:
+		// statements_1
+	break;
+	default:
+	menuBox.onclick = () =>{
+		openMenu.style.opacity = !getStyleValue(openMenu, 'opacity') ? 1 : 0
+		closeMenu.style.opacity = !getStyleValue(closeMenu, 'opacity') ? 1 : 0
+		nav.style.marginLeft = !getStyleValue(nav, 'margin-left') ? '100vw' : '0vw';
+		nav.style.backgroundColor = 'hsl(0 0% 100%)';
+		navBarProducts.classList.add('hidden');
+		navBarBonsaiWorkflow.classList.add('hidden')
+		navBarTemplates.classList.add('hidden')
+	}
 
-navBarOptionsProduct.onclick = () =>{
-	nav.style.backgroundColor = 'hsl(0 0% 97%)';
-	navBarProducts.classList.toggle('hidden');
-}
+	navBarOptionsProduct.onclick = () =>{
+		nav.style.backgroundColor = 'hsl(0 0% 97%)';
+		navBarProducts.classList.toggle('hidden');
+	}
 
-productsDivBonsaiWorkflow.onclick = () => navBarBonsaiWorkflow.classList.toggle('hidden');
+	productsDivBonsaiWorkflow.onclick = () => navBarBonsaiWorkflow.classList.toggle('hidden');
 
-navBarOptionsTemplates.onclick = () => {
-	nav.style.backgroundColor = 'hsl(0 0% 97%)';
-	navBarTemplates.classList.toggle('hidden');
+	navBarOptionsTemplates.onclick = () => {
+		nav.style.backgroundColor = 'hsl(0 0% 97%)';
+		navBarTemplates.classList.toggle('hidden');
+	}
+	break;
 }
 
 checkBox.onclick = () =>{
@@ -80,4 +87,7 @@ checkBox.onclick = () =>{
 	: (toggleMonthly.classList.toggle('selected'), toggleYearly.classList.toggle('selected'), planDuration.forEach((element, index)=> planDuration[index].textContent = '/MONTH'), normalAmount.textContent = '19', plusAmount.textContent = '29', normalPopular.classList.toggle('popular'), plusPopular.classList.toggle('popular'), addonsSectionDiv.classList.toggle('change-addons-section'), addonsPrice[2].textContent = '$10',  addonsPrice[1].textContent = '$9', addonsFeatures[0].textContent = 'Bonsai Tax', addonsFeatures[1].textContent = 'Track expenses, identify write-offs, and estimate quarterly taxes easily.')
 }
 
-window.onscroll = () => header.style.backgroundColor =  document.documentElement.scrollTop > 10 &&  document.documentElement.scrollTop < 70 ? "rgb(255 255 255 / 50%)" : document.documentElement.scrollTop > 70 ? "rgb(255 255 255 / 100%)" : "transparent"
+window.onscroll = () => {
+	if (screen.width >= 992) return
+	header.style.backgroundColor =  document.documentElement.scrollTop > 10 &&  document.documentElement.scrollTop < 70 ? "rgb(255 255 255 / 50%)" : document.documentElement.scrollTop > 70 ? "rgb(255 255 255 / 100%)" : "transparent"
+}
