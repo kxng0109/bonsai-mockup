@@ -31,6 +31,7 @@ const navBarProducts = init('#nav-bar-products');
 const navBarBonsaiWorkflow = init('#nav-bar--bonsai-workflow');
 const productsDivBonsaiWorkflow = init('#products--div--bonsai-workflow');
 const navBarOptionsTemplates = init('#nav-bar-options--templates');
+const navBarProductsText = init('.nav-bar-products--text');
 const navBarTemplates = init('#nav-bar--templates');
 const navBarTemplatesExamples = init('.nav-bar-templates-examples');
 
@@ -39,6 +40,9 @@ const nodeListArray = Array.from(footerSubTemplatesDropdown); //Array.from() con
 let initialHeight = nodeListArray.map(data =>{
 	return getStyleValue(data, 'height')
 })
+
+let previousText = new Array(3)
+navBarProductsText.forEach((element, index) => previousText[index] = navBarProductsText[index].textContent)
 
 faqQuestionsDiv.forEach((element, index) =>{
 	faqQuestionsDiv[index].onclick = () =>{
@@ -56,8 +60,10 @@ footerSubTemplatesName.forEach((element, index) =>{
 
 switch (true) {
 	case screen.width >= 992:
-		// statements_1
-	break;
+		navBarProductsText[0].textContent = 'Look professional, win more clients and manage your business from one place'
+		navBarProductsText[1].textContent = 'Track expenses, maximize tax write-offs, and estimate taxes without the headache'
+		navBarProductsText[2].textContent = 'Bonsai’s all-in-one financial hub: No fees and lightning fast payouts';
+		break;
 	default:
 	menuBox.onclick = () =>{
 		openMenu.style.opacity = !getStyleValue(openMenu, 'opacity') ? 1 : 0
