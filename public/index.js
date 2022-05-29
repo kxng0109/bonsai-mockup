@@ -34,6 +34,8 @@ const navBarOptionsTemplates = init('#nav-bar-options--templates');
 const navBarProductsText = init('.nav-bar-products--text');
 const navBarTemplates = init('#nav-bar--templates');
 const navBarTemplatesExamples = init('.nav-bar-templates-examples');
+const firstHeaderNavProductsDiv = init('#first-header-nav-products-div');
+const headerNavProductsRight = init('#header-nav--products-right');
 
 const getStyleValue = (element, property) => parseInt(getComputedStyle(element, undefined).getPropertyValue(property));
 const nodeListArray = Array.from(footerSubTemplatesDropdown); //Array.from() converts the nodelist into an array
@@ -42,7 +44,19 @@ let initialHeight = nodeListArray.map(data =>{
 })
 
 let previousText = new Array(3)
-navBarProductsText.forEach((element, index) => previousText[index] = navBarProductsText[index].textContent)
+navBarProductsText.forEach((element, index) => previousText[index] = navBarProductsText[index].textContent);
+
+firstHeaderNavProductsDiv.onmouseover = () =>{
+	headerNavProductsRight.style.opacity = '1'
+}
+
+headerNavProductsRight.onmouseover=()=>{
+	headerNavProductsRight.style.opacity = '1'	
+}
+
+firstHeaderNavProductsDiv.onmouseleave = () =>{
+	headerNavProductsRight.style.opacity = '0'
+}
 
 faqQuestionsDiv.forEach((element, index) =>{
 	faqQuestionsDiv[index].onclick = () =>{

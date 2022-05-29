@@ -39,15 +39,48 @@ ion-icon{
 }
 
 #header-nav--products{
-	@apply hidden fixed z-1 bg-white top-[76px] left-[7.66%] w-screen lg:flex flex-col;
+	@apply hidden fixed z-1 top-[66px] left-[7.66%] w-screen flex-row;
 }
 
 #header-nav--products-left{
-	@apply w-[22rem] px-10
+	@apply w-[22rem] bg-white min-w-[22rem] shadow-lg
+}
+
+#header-nav--products-left .products--div{
+	@apply px-10 pb-0 border-none
+}
+
+#first-header--options:hover>#header-nav--products, #first-header--options:focus>#header-nav--products, #first-header--options:focus-within>#header-nav--products{
+	@apply flex
 }
 
 #header-nav--products-left .nav-bar-products--text{
-	@apply text-[1.0625rem] leading-[22px]
+	@apply text-[1.0625rem] leading-[22px] lg:pb-10 border-b border-slate-300
+}
+
+.last{
+	@apply border-none
+}
+
+#header-nav--products-right{
+	@apply opacity-0 bg-white grid grid-cols-2 py-5;
+	transition: all 0.2s linear;
+}
+
+.hnpr-divs{
+	@apply flex px-5 pr-9 hover:bg-gray-50
+}
+
+.hnpr-divs>ion-icon{
+	@apply text-3xl mr-2 !important
+}
+
+.hnpr-divs>div>p:first-of-type{
+	@apply text-[0.9rem] py-1
+}
+
+.hnpr-divs>div>p:last-of-type{
+	@apply text-[0.8125rem] leading-none text-grey-shade
 }
 
 .products--div>ion-icon{
@@ -55,7 +88,7 @@ ion-icon{
 }
 
 .products--div:hover>ion-icon{
-	@apply block absolute -right-11 top-1/2 -translate-y-1/2 !important
+	@apply block absolute right-2 top-1/2 -translate-y-1/2 !important
 }
 
 #header-nav ion-icon{
@@ -137,7 +170,15 @@ nav{
 }
 
 .products--div{
-	@apply border-b border-slate-300 py-10 relative
+	@apply border-b border-slate-300 py-10 relative;
+		transition: all 0.1s linear;
+}
+
+@media (min-width: 992px){
+	.products--div:hover{
+		background: hsl(0, 0%, 98%);
+		border-color: transparent;
+	}
 }
 
 .nav-bar-products--header{
