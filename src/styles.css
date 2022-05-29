@@ -38,8 +38,8 @@ ion-icon{
 	@apply hidden ml-auto mr-12 lg:flex
 }
 
-#header-nav--products{
-	@apply hidden fixed z-1 top-[66px] left-[7.66%] w-screen flex-row;
+#header-nav--products, #header-nav--templates{
+	@apply hidden fixed z-2 top-[66px] left-[7.66%] w-screen flex-row;
 }
 
 #header-nav--products-left{
@@ -99,7 +99,7 @@ ion-icon{
 	@apply mr-10 text-[1.0625rem]
 }
 
-#header-nav .nav-bar-options--first-div{
+#header-nav .header-nav-options--expand-div{
 	@apply flex items-center
 }
 
@@ -109,6 +109,43 @@ ion-icon{
 
 .header-nav--options:last-of-type{
 	@apply px-7 ml-4 !important
+}
+
+#header-nav-options--templates:hover > #header-nav--templates, #header-nav-options--templates:focus-within > #header-nav--templates, #header-nav-options--templates:focus > #header-nav--templates{
+	@apply flex;
+}
+
+#header-nav--templates{
+	@apply hidden left-[17.13%] bg-white pl-9 text-[0.95rem] w-[770px] min-w-[770px] pt-2 pb-7 shadow-lg
+}
+
+#header-nav--templates-left{
+	@apply w-[260px] pt-1
+}
+
+#header-nav--templates-left>.nav-bar-templates-examples{
+	@apply py-[1.1rem] relative my-0 items-center hover:bg-gray-50 first:pt-5
+}
+
+#header-nav--templates-left .template-hover-icon{
+	@apply  text-3xl right-1 top-1/2 -translate-y-1/2
+}
+
+.header-nav--templates-right{
+	@apply px-11 hidden;
+	width: calc(100% - 260px);
+}
+
+.header-nav-sub-template-title{
+	 @apply text-2xl amerigo my-[0.55rem] mb-5
+}
+
+.header-nav-sub-templates{
+	@apply text-center py-[1.6rem] border border-slate-200 rounded my-[0.6rem] bg-contain odd:bg-header-texture1 even:bg-header-texture2
+}
+
+#templates-see-all{
+	@apply text-green-shade text-center font-bold w-full my-4
 }
 
 #header-buttons{

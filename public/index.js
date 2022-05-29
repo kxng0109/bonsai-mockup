@@ -34,6 +34,7 @@ const navBarOptionsTemplates = init('#nav-bar-options--templates');
 const navBarProductsText = init('.nav-bar-products--text');
 const navBarTemplates = init('#nav-bar--templates');
 const navBarTemplatesExamples = init('.nav-bar-templates-examples');
+const headerNavTemplatesRight = init('.header-nav--templates-right');
 const firstHeaderNavProductsDiv = init('#first-header-nav-products-div');
 const headerNavProductsRight = init('#header-nav--products-right');
 
@@ -57,6 +58,16 @@ headerNavProductsRight.onmouseover=()=>{
 firstHeaderNavProductsDiv.onmouseleave = () =>{
 	headerNavProductsRight.style.opacity = '0'
 }
+
+navBarTemplatesExamples.forEach( (element, index) =>{
+	headerNavTemplatesRight[0].style.display = 'block';
+	navBarTemplatesExamples[index].onmouseover = () =>{		
+		headerNavTemplatesRight.forEach((element, index) =>{
+			headerNavTemplatesRight[index].style.display = 'none';
+		});
+		headerNavTemplatesRight[index].style.display = 'block'
+	}
+});
 
 faqQuestionsDiv.forEach((element, index) =>{
 	faqQuestionsDiv[index].onclick = () =>{

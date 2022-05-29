@@ -17,6 +17,10 @@ module.exports = {
 				'sm' : '480px',
 				'lg': '992px'
 			},
+			backgroundImage:{
+				'header-texture1' : "url('./images/background1.svg')",
+				'header-texture2' : "url('./images/background2.svg')"
+			}
 		},
 	},
 	plugins: [],
