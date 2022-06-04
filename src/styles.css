@@ -31,7 +31,7 @@ ion-icon{
 }
 
 #logo{
-	@apply w-[9.4rem] lg:w-[6.4rem]
+	@apply w-[9.4rem]
 }
 
 #header-nav{
@@ -39,7 +39,7 @@ ion-icon{
 }
 
 #header-nav--products, #header-nav--templates{
-	@apply hidden fixed z-2 top-[66px] left-[7.66%] w-screen flex-row;
+	@apply hidden fixed z-2 top-[66px] left-[7.66vw] w-screen flex-row xl:left-[14.7vw];
 }
 
 #header-nav--products-left{
@@ -116,7 +116,7 @@ ion-icon{
 }
 
 #header-nav--templates{
-	@apply hidden left-[17.13%] bg-white pl-9 text-[0.95rem] w-[770px] min-w-[770px] pt-2 pb-7 shadow-lg
+	@apply hidden left-[17.13%] bg-white pl-9 text-[0.95rem] w-[770px] min-w-[770px] pt-2 pb-7 shadow-lg xl:left-[23.5vw];
 }
 
 #header-nav--templates-left{
@@ -546,4 +546,7 @@ footer{
 
 
 @media (min-width: 992px) and (max-width: 1100px){
+	#logo{
+		@apply lg:w-[6.4rem]
+	}
 }

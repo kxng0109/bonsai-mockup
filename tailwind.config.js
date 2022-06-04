@@ -15,7 +15,8 @@ module.exports = {
 			},
 			screens:{
 				'sm' : '480px',
-				'lg': '992px'
+				'lg': '992px',
+				'xl' : '1055px'
 			},
 			backgroundImage:{
 				'header-texture1' : "url('./images/background1.svg')",
