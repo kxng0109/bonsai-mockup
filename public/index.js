@@ -120,6 +120,6 @@ checkBox.onclick = () =>{
 }
 
 window.onscroll = () => {
-	if (screen.width >= 992) return
+	if (screen.width >= 992) return header.style.backgroundColor = 'white';
 	header.style.backgroundColor =  document.documentElement.scrollTop > 10 &&  document.documentElement.scrollTop < 70 ? "rgb(255 255 255 / 50%)" : document.documentElement.scrollTop > 70 ? "rgb(255 255 255 / 100%)" : "transparent"
 }
